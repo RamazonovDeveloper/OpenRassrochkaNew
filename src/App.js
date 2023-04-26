@@ -32,8 +32,9 @@ function App() {
 
   return (
     <div className="">
+      {/* HEADER SECTION START */}
       <div className="container">
-        <div className="flex justify-end gap-x-3.5 mt-11">
+        <div className="flex justify-end gap-x-3.5 mt-11 mb-2">
           <div
             className={
               lang === "uz"
@@ -58,6 +59,7 @@ function App() {
           </div>
         </div>
       </div>
+      {/* HEADER SECTION END */}
 
       {/* HERO SECTION START */}
       <div className="hero overflow-hidden w-full min-h-[700px] xl:pl-[10%] flex flex-col justify-between">
@@ -77,6 +79,7 @@ function App() {
           </p>
         </div>
       </div>
+      {/* HERO SECTION END */}
 
       <div className="container mt-[56px] ">
         <div className="flex text-main_color font-medium text-[14px] mb-10">
@@ -99,13 +102,80 @@ function App() {
           )}
           <div className="text-base mt-4 font-medium">
             <p>{langData.service_text1}</p>
-            <p>{langData.service_text1}</p>
+            <p>{langData.service_text2}</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="info">
+        <div className="container">
+          <div className="info__body flex justify-between  min-h-[578px]">
+            {/* info ROW */}
+            <div className="info__row w-[48.3%] flex flex-col justify-between">
+              {/* text BLOCK */}
+              <div className="info__text i-text">
+                {/* text BOX */}
+                <div className="i-text__box mb-4">
+                  <p className="text-gray_table opacity-50 text-sm  sm:text-base  font-medium">
+                    lroem1
+                  </p>
+                  <p className="text-gray_table text-sm  sm:text-base  uppercase">lroem1</p>
+                </div>
+              </div>
+              {/* table BLOCK */}
+              <div className="info__table i-table ">
+                <div className="i-table__head px-2 py-3.5 bg-main_color">
+                  <p className="text-sm sm:text-base   text-white">lorem</p>
+                </div>
+                <div className="i-table__body align-middle px-2.5 py-20 bg-main_color_light">
+                  {/* text BOX */}
+                  <div className="i-text__box mb-4">
+                    <p className="text-gray_table opacity-50 text-sm sm:text-base   font-medium">
+                      lroem1
+                    </p>
+                    <p className="text-gray_table text-sm sm:text-base   uppercase">lroem1</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* info ROW */}
+            <div className="info__row w-[48.3%] flex flex-col justify-between">
+              {/* text BLOCK */}
+              <div className="info__text i-text">
+                {/* text BOX */}
+                <div className="i-text__box mb-4">
+                  <p className="text-gray_table opacity-50 text-sm sm:text-base   font-medium">
+                    lroem1
+                  </p>
+                  <p className="text-gray_table text-sm sm:text-base   uppercase">lroem1</p>
+                </div>
+              </div>
+              {/* table BLOCK */}
+              <div className="info__table i-table">
+                <div className="i-table__head px-2 py-3.5 bg-main_color">
+                  <p className="text-sm sm:text-base   text-white">lorem</p>
+                </div>
+                <div className="i-table__subhead px-2.5 bg-main_color_middle">
+                  <p className="text-sm sm:text-base   text-white">lorem</p>
+                </div>
+                <div className="i-table__body align-middle px-2.5 py-20 bg-main_color_light">
+                  {/* text BOX */}
+                  <div className="i-text__box mb-4">
+                    <p className="text-gray_table opacity-50 text-sm sm:text-base   font-medium">
+                      lroem1
+                    </p>
+                    <p className="text-gray_table text-sm sm:text-base   uppercase">lroem1</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       <div className="container">
-      <div className="my-10 font-medium">
+        <div className="my-10 font-medium">
           <p className="uppercase text-[14px] font-medium mb-[14px]">
             <span className="text-main_color mr-2">01</span>
             {langData.service_item1_title}
@@ -135,7 +205,6 @@ function App() {
         </div>
         <SerciseItemTemplate itemNum={"08"} itemTitle={langData.service_item8_title} itemText={langData.service_item8_text}/>
       </div>
-
       <div className="form_section xs:h-[160px] sm:h-[200px] md:h-[250px] lg:h-[330px]">
         <div className="container ">
 
@@ -170,6 +239,37 @@ function App() {
           </div>
         </div>
       </div>
+      {/* <div className="form_section relative h-[160px]">
+        <div className="container">
+          <div className="form_section_card xs:py-[40px] xs:px-[10px] sm:py-12 sm:px-4 bg-gray_form absolute top-3/4 md:flex">
+            <div className="md:w-1/2">
+              <h3 className="font-medium text-base uppercase sm:text-[18px] lg:text-[20px]">
+                {langData.partners_header}
+              </h3>
+              <p className="xs:text-[14px] sm:text-base my-6 font-medium lg:w-3/4 sm:mt-8">
+                {langData.partners_text}
+              </p>
+            </div>
+            <div className="md:w-1/2">
+              <input
+                className="w-full py-3 px-2 bg-gray_input text-base text-black my_input"
+                type="text"
+                placeholder={langData.partners_input_name}
+              />
+              <input
+                className="w-full py-3 px-2 bg-gray_input text-base text-black my_input xs:mt-4 xs:mb-6 sm:mt-5 sm:mb-11 xl:mb-[60px]"
+                type="text"
+                placeholder={langData.partners_input_tel}
+              />
+              {/* <input type="text" placeholder={langData.partners_input_tel}/> */}
+              {/*  xs:mt-6 xs:mb-10 sm:m */}
+              {/* <button className="w-full bg-main_color text-white py-3 uppercase">
+                {langData.partners_btn}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div> */}
 
       <div className="footer mt-[500px] py-[78px]">
         <div className="container">

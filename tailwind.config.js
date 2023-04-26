@@ -5,11 +5,14 @@ module.exports = {
     extend: {
       colors: {
         main_color: "#4E0F8A",
+        main_color_middle: "#4E0F8A80",
+        main_color_light: "#4f0f8a33",
         black: "#000000",
         white: "#fff",
         gray_light: "#F4F5F7",
         gray_form: "#ECF0F3",
         gray_input: "#E4E7EB",
+        gray_table: "#020000",
       },
     },
     screens: {

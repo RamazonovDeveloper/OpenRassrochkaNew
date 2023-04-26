@@ -60,7 +60,11 @@
 
 .footer {
     background: url('./assets/foot_img.png');
+
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+
+    background-size: contain;
+    color: #4f0f8a33;
 }
