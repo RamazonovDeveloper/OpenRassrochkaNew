@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./App.css";
 
+import SerciseItemTemplate from "./components/SerciseItemTemplate"
+
 import ruFlag from "./assets/Flag.png";
 import uzFlag from "./assets/bayroq.png";
 
@@ -80,10 +82,6 @@ function App() {
         <div className="flex text-main_color font-medium text-[14px] mb-10">
           <p className="uppercase">{langData.service_name}</p>
         </div>
-        <p className="uppercase text-[25px] text-main_color leading-7 font-light">
-          Open <span className="text-black">muddatli kartasi</span> - Bu
-          biznesingiz o’sishi va rivojlanishi
-        </p>
         <div className="text-base mt-4 font-medium">
           {/* <p className='uppercase text-[25px] text-main_color leading-7 font-light'>Open <span className='text-black'>muddatli kartasi</span> - Bu biznesingiz o’sishi va rivojlanishi</p> */}
           {lang === "uz" ? (
@@ -107,19 +105,14 @@ function App() {
       </div>
 
       <div className="container">
-        <p className="uppercase text-[14px] font-medium my-10">
-          <span className="text-main_color mr-2">02</span>
-          {langData.service_item2_title}
-        </p>
-        <div className="my-10 font-medium">
+      <div className="my-10 font-medium">
           <p className="uppercase text-[14px] font-medium mb-[14px]">
-            <span className="text-main_color mr-2">03</span>
-            {langData.service_item3_title}
-          </p>
-          <p className="leading-[18px] text-[14px]">
-            {langData.service_item3_text}
+            <span className="text-main_color mr-2">01</span>
+            {langData.service_item1_title}
           </p>
         </div>
+        <SerciseItemTemplate itemNum={"02"} itemTitle={langData.service_item2_title}/>
+        <SerciseItemTemplate itemNum={"03"} itemTitle={langData.service_item3_title} itemText={langData.service_item3_text}/>
         <div className="my-10 font-medium">
           <p className="uppercase text-[14px] font-medium mb-[14px]">
             <span className="text-main_color mr-2">04</span>
@@ -129,24 +122,8 @@ function App() {
             {langData.service_item4_text}
           </p>
         </div>
-        <div className="my-10 font-medium">
-          <p className="uppercase text-[14px] font-medium mb-[14px]">
-            <span className="text-main_color mr-2">05</span>
-            {langData.service_item5_title}
-          </p>
-          <p className="leading-[18px] text-[14px]">
-            {langData.service_item5_text}
-          </p>
-        </div>
-        <div className="my-10 font-medium">
-          <p className="uppercase text-[14px] font-medium mb-[14px]">
-            <span className="text-main_color mr-2">06</span>
-            {langData.service_item6_title}
-          </p>
-          <p className="leading-[18px] text-[14px]">
-            {langData.service_item6_text}
-          </p>
-        </div>
+        <SerciseItemTemplate itemNum={"05"} itemTitle={langData.service_item5_title} itemText={langData.service_item5_text}/>
+        <SerciseItemTemplate itemNum={"06"} itemTitle={langData.service_item6_title} itemText={langData.service_item6_text}/>
         <div className="my-10 font-medium">
           <p className="uppercase text-[14px] font-medium mb-[14px]">
             <span className="text-main_color mr-2">07</span>
@@ -156,44 +133,39 @@ function App() {
             {langData.service_item7_text}
           </p>
         </div>
-        <div className="my-10 font-medium">
-          <p className="uppercase text-[14px] font-medium mb-[14px]">
-            <span className="text-main_color mr-2">08</span>
-            {langData.service_item8_title}
-          </p>
-          <p className="leading-[18px] text-[14px]">
-            {langData.service_item8_text}
-          </p>
-        </div>
+        <SerciseItemTemplate itemNum={"08"} itemTitle={langData.service_item8_title} itemText={langData.service_item8_text}/>
       </div>
 
-      <div className="form_section relative h-[160px]">
-        <div className="container">
-          <div className="form_section_card xs:py-[40px] xs:px-[10px] sm:py-12 sm:px-4 bg-gray_form absolute top-3/4 md:flex">
-            <div className="md:w-1/2">
-              <h3 className="font-medium text-base uppercase sm:text-[18px] lg:text-[20px]">
-                {langData.partners_header}
-              </h3>
-              <p className="xs:text-[14px] sm:text-base my-6 font-medium lg:w-3/4 sm:mt-8">
-                {langData.partners_text}
-              </p>
-            </div>
-            <div className="md:w-1/2">
-              <input
-                className="w-full py-3 px-2 bg-gray_input text-base text-black my_input"
-                type="text"
-                placeholder={langData.partners_input_name}
-              />
-              <input
-                className="w-full py-3 px-2 bg-gray_input text-base text-black my_input xs:mt-4 xs:mb-6 sm:mt-5 sm:mb-11 xl:mb-[60px]"
-                type="text"
-                placeholder={langData.partners_input_tel}
-              />
-              {/* <input type="text" placeholder={langData.partners_input_tel}/> */}
-              {/*  xs:mt-6 xs:mb-10 sm:m */}
-              <button className="w-full bg-main_color text-white py-3 uppercase">
-                {langData.partners_btn}
-              </button> 
+      <div className="form_section xs:h-[160px] sm:h-[200px] md:h-[250px] lg:h-[330px]">
+        <div className="container ">
+
+          <div className="relative xs:h-[160px] sm:h-[200px] md:h-[250px] lg:h-[330px]">
+            <div className="form_section_card xs:py-[40px] xs:px-[10px] sm:py-12 sm:px-4 bg-gray_form absolute top-1/2 md:flex">
+              <div className="md:w-1/2">
+                <h3 className="font-medium text-base uppercase sm:text-[18px] lg:text-[20px]">
+                  {langData.partners_header}
+                </h3>
+                <p className="xs:text-[14px] sm:text-base my-6 font-medium lg:w-3/4 sm:mt-8">
+                  {langData.partners_text}
+                </p>
+              </div>
+              <div className="md:w-1/2">
+                <input
+                  className="w-full py-3 px-2 bg-gray_input text-base text-black my_input"
+                  type="text"
+                  placeholder={langData.partners_input_name}
+                />
+                <input
+                  className="w-full py-3 px-2 bg-gray_input text-base text-black my_input xs:mt-4 xs:mb-6 sm:mt-5 sm:mb-11 xl:mb-[60px]"
+                  type="text"
+                  placeholder={langData.partners_input_tel}
+                />
+                {/* <input type="text" placeholder={langData.partners_input_tel}/> */}
+                {/*  xs:mt-6 xs:mb-10 sm:m */}
+                <button className="w-full bg-main_color text-white py-3 uppercase">
+                  {langData.partners_btn}
+                </button> 
+              </div>
             </div>
           </div>
         </div>
