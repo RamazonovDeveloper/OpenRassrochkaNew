@@ -1,4 +1,50 @@
-.form_section{
+.form_section {
     background: url('./assets/BG.png');
     background-size: contain;
+}
+
+.hero {
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    width: 75%;
+    height: 85%;
+    position: absolute;
+    bottom: 60px;
+    right: 0;
+    background: #ECF0F3;
+    z-index: -2;
+}
+
+.hero::after {
+    content: url('./assets/headerGirl.png');
+    position: absolute;
+    left: -25%;
+    z-index: -1;
+}
+
+@media screen and (min-width:414px) {
+    .hero::after {
+        left: -10%;
+    }
+}
+
+@media screen and (min-width:600px) {
+    .hero::after {
+        left: 10%;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .hero::after {
+        left: 30%;
+    }
+}
+
+@media screen and (min-width:1440px) {
+    .hero::after {
+        left: 40%;
+    }
 }

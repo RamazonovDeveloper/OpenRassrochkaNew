@@ -59,8 +59,28 @@ function App() {
       </div>
 
       {/* HERO SECTION START */}
-      <div className="hero overflow-hidden">
+      <div className="hero overflow-hidden w-full min-h-[700px] xl:pl-[10%] flex flex-col justify-between">
         {/* hero TITLE */}
+        <h1 className="hero__title text-black text-uppercase text-[35px] max-w-[202px] px-4 py-2 sm:text-[40px] lg:text-[50px] xl:text-[60px] smm:max-w-[300px] md:max-w-[550px] md:mt-[140px]">
+          open
+          <p className="text-main_color"> {langData?.header_title}</p>
+        </h1>
+
+        {/* hero BLOCK */}
+        <div className="hero__block bg-main_color py-[30px] pl-2.5 pr-7 lg:px-[60px] lg:py-[45px]  max-w-[309px] sm:max-w-[377px] smm:max-w-[400px] md:max-w-[414px] lg:max-w-[574px] xl:max-w-[650px] xl:px-[70px] ">
+          <p className="hero__text text-white text-base sm:text-xl md:uppercase lg:text-[22px] xl:text-[25px]">
+            {langData?.header_text1}
+          </p>
+          <p className="hero__text text-white text-base sm:text-xl md:uppercase lg:text-[22px] xl:text-[25px]">
+            {langData?.header_text2}
+          </p>
+        </div>
+      </div>
+
+      {/* HERO SECTION END */}
+      {/* HERO SECTION START */}
+      {/* <div className="hero overflow-hidden">
+
         <h1 className="hero__title text-black text-uppercase text-[35px] max-w-[202px] px-4 py-2 sm:text-[40px] smm:max-w-[300px] md:align-middle">
           open
           <span className="text-main_color"> {langData?.header_title}</span>
@@ -75,7 +95,6 @@ function App() {
           </div>
         </div>
 
-        {/* hero BLOCK */}
         <div className="hero__block bg-main_color py-[30px] pl-2.5 pr-7 max-w-[309px]  sm:max-w-[377px] smm:max-w-[400px] md:max-w-[414px]  -translate-y-[200px] smm:-translate-y-[300px] lg:px-[60px] lg:py-[45px] lg:max-w-[574px]">
           <p className="hero__text text-white text-base sm:text-xl md:uppercase lg:text-[22px]">
             {langData?.header_text1}
@@ -84,7 +103,7 @@ function App() {
             {langData?.header_text2}
           </p>
         </div>
-      </div>
+      </div> */}
 
       {/* HERO SECTION END */}
 
