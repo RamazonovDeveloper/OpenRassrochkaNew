@@ -1,38 +1,72 @@
-.App {
-  text-align: center;
+.nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+    padding: 25px 0;
+    cursor: pointer;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav > p{
+    margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav > img{
+    margin-right: 8px;
+    width: 30px;
+    height: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.inactive_nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+    padding: 25px 0;
+    opacity: 0.5;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+
+.footer{
+    width: 100%;
+    background:url('./assets/foot_img.png');
+    padding: 65px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footer_big{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_card{
+    font-weight: 500;
+    padding: 30px;
+    min-width: 300px;
+    max-width: 400px;
+    background-color: white;
+}
+
+.footer_card > p{
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.open_navbar{
+    display: flex;
+    justify-content: end;
+    padding: 10px 0;
+}
+
+.footer_card_items{
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    margin-top: 24px;
+}
+
+.footer_card_items > p{
+    margin: 0;
 }
