@@ -61,4 +61,5 @@
 .footer {
     background: url('./assets/foot_img.png');
     background-size: contain;
+    color: #4f0f8a33;
 }
