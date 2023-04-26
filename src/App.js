@@ -3,7 +3,6 @@ import "./App.css";
 
 import ruFlag from "./assets/Flag.png";
 import uzFlag from "./assets/bayroq.png";
-import headerGirl from "./assets/headerGirl.png";
 
 import message from "./assets/message.png";
 import phone from "./assets/call.png";
@@ -77,36 +76,6 @@ function App() {
         </div>
       </div>
 
-      {/* HERO SECTION END */}
-      {/* HERO SECTION START */}
-      {/* <div className="hero overflow-hidden">
-
-        <h1 className="hero__title text-black text-uppercase text-[35px] max-w-[202px] px-4 py-2 sm:text-[40px] smm:max-w-[300px] md:align-middle">
-          open
-          <span className="text-main_color"> {langData?.header_title}</span>
-        </h1>
-        <div className="relative">
-          <div className="hero__img-block relative -z-10 bg-gray_form w-[920px] h-[620px] translate-x-[9%] -translate-y-[18%] lg:translate-x-[40%] lg-w-70%">
-            <img
-              className="hero__img w-full -translate-x-[21%] sm:-translate-x-[12%] smm:-translate-x-[5%] md:translate-x-0 -translate-y-[4%]"
-              src={headerGirl}
-              alt="main girl"
-            />
-          </div>
-        </div>
-
-        <div className="hero__block bg-main_color py-[30px] pl-2.5 pr-7 max-w-[309px]  sm:max-w-[377px] smm:max-w-[400px] md:max-w-[414px]  -translate-y-[200px] smm:-translate-y-[300px] lg:px-[60px] lg:py-[45px] lg:max-w-[574px]">
-          <p className="hero__text text-white text-base sm:text-xl md:uppercase lg:text-[22px]">
-            {langData?.header_text1}
-          </p>
-          <p className="hero__text text-white text-base sm:text-xl md:uppercase lg:text-[22px]">
-            {langData?.header_text2}
-          </p>
-        </div>
-      </div> */}
-
-      {/* HERO SECTION END */}
-
       <div className="container mt-[56px] ">
         <div className="flex text-main_color font-medium text-[14px] mb-10">
           <p className="uppercase">{langData.service_name}</p>
@@ -116,8 +85,24 @@ function App() {
           biznesingiz o’sishi va rivojlanishi
         </p>
         <div className="text-base mt-4 font-medium">
-          <p>{langData.service_text1}</p>
-          <p>{langData.service_text1}</p>
+          {/* <p className='uppercase text-[25px] text-main_color leading-7 font-light'>Open <span className='text-black'>muddatli kartasi</span> - Bu biznesingiz o’sishi va rivojlanishi</p> */}
+          {lang === "uz" ? (
+            <p className="uppercase text-[25px] text-main_color leading-7 font-light">
+              Open <span className="text-black">muddatli kartasi</span> - Bu
+              biznesingiz o’sishi va rivojlanishi
+            </p>
+          ) : (
+            <p className="uppercase text-[25px] text-main_color leading-7 font-light">
+              <span className="text-black">Карта рассрочки</span> open{" "}
+              <span className="text-black">- это</span> рост{" "}
+              <span className="text-black">и</span> развитие{" "}
+              <span className="text-black">вашего</span> бизнеса
+            </p>
+          )}
+          <div className="text-base mt-4 font-medium">
+            <p>{langData.service_text1}</p>
+            <p>{langData.service_text1}</p>
+          </div>
         </div>
       </div>
 
@@ -200,6 +185,49 @@ function App() {
             <button className="w-full bg-main_color text-white py-3 uppercase mt-6 mb-10">
               {langData.partners_btn}
             </button>
+            <div className="form_section_card xs:py-[40px] xs:px-[10px] sm:py-12 sm:px-4 bg-gray_form absolute top-3/4 md:flex">
+              <div className="md:w-1/2">
+                <h3 className="font-medium text-base uppercase sm:text-[18px] lg:text-[20px]">
+                  {langData.partners_header}
+                </h3>
+                <p className="xs:text-[14px] sm:text-base my-6 font-medium lg:w-3/4 sm:mt-8">
+                  {langData.partners_text}
+                </p>
+              </div>
+              <div className="md:w-1/2">
+                <input
+                  className="w-full py-3 px-2 bg-gray_input text-base text-black my_input"
+                  type="text"
+                  placeholder={langData.partners_input_name}
+                />
+                <input
+                  className="w-full py-3 px-2 bg-gray_input text-base text-black my_input xs:mt-4 xs:mb-6 sm:mt-5 sm:mb-11 xl:mb-[60px]"
+                  type="text"
+                  placeholder={langData.partners_input_tel}
+                />
+                {/* <input type="text" placeholder={langData.partners_input_tel}/> */}
+                {/*  xs:mt-6 xs:mb-10 sm:m */}
+                <button className="w-full bg-main_color text-white py-3 uppercase">
+                  {langData.partners_btn}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="footer mt-[500px] py-[78px]">
+          <div className="container">
+            <div className="bg-gray_light xs:py-8 xs:px-2.5 sm:p-[30px] max-w-sm mx-auto">
+              <p className="uppercase font-medium">{langData.decision}</p>
+              <div className="flex items-center mt-7 mb-[20px] font-medium">
+                <img className="mr-4" src={message} alt="" />
+                <p>hello@opentech.uz</p>
+              </div>
+              <div className="flex items-center font-medium">
+                <img className="mr-4" src={phone} alt="" />
+                <p> +998 (90) 968-7881</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
