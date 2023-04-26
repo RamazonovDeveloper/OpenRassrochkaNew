@@ -89,8 +89,9 @@ function App() {
           <div className="form_section_card py-[40px] px-[10px] bg-gray_form absolute top-3/4">
             <h3 className='font-medium text-base uppercase'>{langData.partners_header}</h3>
             <p className='text-[14px] my-6 font-medium'>{langData.partners_text}</p>
-            <input className='w-full py-4 px-2 bg-gray_input' type="text" placeholder={langData.partners_input_name}/>
-            <input type="text" placeholder={langData.partners_input_tel}/>
+            <input className='w-full py-3 px-2 bg-gray_input text-base text-black' type="text" placeholder={langData.partners_input_name}/>
+            <input className='w-full py-3 px-2 bg-gray_input text-base text-black' type="text" placeholder={langData.partners_input_tel}/>
+            {/* <input type="text" placeholder={langData.partners_input_tel}/> */}
             <button className='w-full bg-main_color text-white py-3 uppercase mt-6 mb-10'>{langData.partners_btn}</button>
           </div>
         </div>
