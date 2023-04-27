@@ -6,6 +6,32 @@
     background-position: center;
 }
 
+/* .info__body{
+    position: relative;
+}
+
+.info__body::before{
+    content: '';
+    width: 342px;
+    height: 500px;
+    position: absolute;
+    top: -20px;
+    left: 75px;
+    background: #ECF0F3;
+    z-index: -2;
+} */
+
+
+@media screen and (min-width:768px) {
+    .info__body::before {
+        width: 747px;
+        height: 105%;
+        /* right: 20px; */
+        left: -37px;
+        top: -27px;
+    }
+}
+
 .hero {
     position: relative;
 }

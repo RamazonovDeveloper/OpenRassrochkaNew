@@ -8,6 +8,7 @@ import uzFlag from "./assets/bayroq.png";
 
 import message from "./assets/message.png";
 import phone from "./assets/call.png";
+import karta from "./assets/karta.png";
 
 import { data } from "./data";
 
@@ -122,27 +123,71 @@ function App() {
             {/* info ROW */}
             <div className="info__row w-[48.3%] flex flex-col justify-between">
               {/* text BLOCK */}
-              <div className="info__text i-text">
-                {/* text BOX */}
-                <div className="i-text__box mb-4">
-                  <p className="text-gray_table opacity-50 text-sm  sm:text-base  font-medium">
-                    lroem1
-                  </p>
-                  <p className="text-gray_table text-sm  sm:text-base  uppercase">lroem1</p>
+              <div>
+
+                {/* MUDDATLI TO'LOVSIZ */}
+                <div className="info__text i-text mb-4">
+                  {/* text BOX */}
+                  <div className="i-text__box">
+                    <p className="text-gray_table opacity-50 text-sm  sm:text-base xs:text-sm  font-medium">
+                      {langData.diagram_bez_rassrochki_title}
+                    </p>
+                    <p className="text-gray_table text-sm  sm:text-base xs:text-sm uppercase">{langData.diagram_bez_rassrochki_text}</p>
+                  </div>
+                </div>
+                
+                {/* UMUMIY QUYMAT */}
+                <div className="info__text i-text">
+                  {/* text BOX */}
+                  <div className="i-text__box mb-4">
+                    <p className="text-gray_table opacity-50 text-sm  sm:text-base  font-medium">
+                      {langData.diagram_obsh_stoit_title}
+                    </p>
+                    <p className="text-gray_table text-sm  sm:text-base">{langData.diagram_obsh_stoit1}</p>
+                  </div>
+                </div>
+
+                <div className="info__text i-text mb-4 md:hidden">
+                  {/* text BOX */}
+                  <div className="i-text__box">
+                    <p className="text-gray_table opacity-50 text-sm  sm:text-base  font-medium">
+                      {langData.diagram_pribl_name}
+                    </p>
+                    <p className="text-gray_table text-sm  sm:text-base  uppercase">{langData.diagram_pribl1_summa}</p>
+                  </div>
                 </div>
               </div>
               {/* table BLOCK */}
-              <div className="info__table i-table ">
-                <div className="i-table__head px-2 py-3.5 bg-main_color">
-                  <p className="text-sm sm:text-base   text-white">lorem</p>
+              <div className="flex">
+                {/* DIAGRAM ITEM */}
+                <div className="info__table i-table md:w-2/3 xs:w-full sm:w-full md:mt-auto md:mb-0">
+                  <div className="i-table__head px-2 py-3.5 bg-main_color">
+                    <p className="text-sm sm:text-base   text-white">{langData.diagram_pribl1}</p>
+                  </div>
+                  <div className="i-table__body align-middle px-2.5 py-20 bg-main_color_light">
+                    {/* text BOX */}
+                    <div className="i-text__box mb-4">
+                      <p className="text-gray_table opacity-50 text-sm sm:text-base font-medium">
+                        {langData.diagram_sebest}
+                      </p>
+                      <p className="text-gray_table text-sm sm:text-base md:hidden uppercase">{langData.diagram_sebest_summa1}</p>
+                    </div>
+                  </div>
                 </div>
-                <div className="i-table__body align-middle px-2.5 py-20 bg-main_color_light">
-                  {/* text BOX */}
-                  <div className="i-text__box mb-4">
-                    <p className="text-gray_table opacity-50 text-sm sm:text-base   font-medium">
-                      lroem1
-                    </p>
-                    <p className="text-gray_table text-sm sm:text-base   uppercase">lroem1</p>
+
+                {/* DIAGRAM ITEM TEXT */}
+                <div className="info__table i-table  md:block xs:hidden md:w-1/3">
+                  <div className="i-table__head px-2 py-3.5 border-b-2">
+                    <p className="text-sm sm:text-base   text-black">{langData.diagram_pribl1_summa}</p>
+                  </div>
+                  <div className="i-table__body align-middle px-2.5 py-20 ">
+                    {/* text BOX */}
+                    <div className="i-text__box mb-4">
+                      <p className="text-gray_table opacity-50 md:hidden text-sm sm:text-base font-medium">
+                        {langData.diagram_sebest}
+                      </p>
+                      <p className="text-gray_table text-sm sm:text-base">{langData.diagram_sebest_summa1}</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -151,30 +196,80 @@ function App() {
             {/* info ROW */}
             <div className="info__row w-[48.3%] flex flex-col justify-between">
               {/* text BLOCK */}
-              <div className="info__text i-text">
+              <div>
+                <div className="info__text i-text">
+                  {/* text BOX */}
+                  <div className="i-text__box mb-4 md:flex ">
+                    <p className="text-gray_table opacity-50 text-sm sm:text-base  md:mr-3 font-medium">
+                      {langData.diagram_s_rassrochki_title}
+                    </p>
+                    <p className="text-gray_table text-sm sm:text-base uppercase">{langData.diagram_s_rassrochki_text}</p>
+                  </div>
+                </div>
+
+                <div className="info__text i-text md:block xs:hidden">
                 {/* text BOX */}
-                <div className="i-text__box mb-4">
-                  <p className="text-gray_table opacity-50 text-sm sm:text-base   font-medium">
-                    lroem1
-                  </p>
-                  <p className="text-gray_table text-sm sm:text-base   uppercase">lroem1</p>
+                  <div className="i-text__box mb-4 md:flex">
+                    <p className="text-gray_table opacity-50 text-sm sm:text-base  md:mr-3 font-medium">
+                      {langData.diagram_obsh_stoit_title}
+                    </p>
+                    <p className="text-gray_table text-sm sm:text-base">{langData.diagram_obsh_stoit2}</p>
+                  </div>
+                </div>
+
+                <div className="info__text i-text md:hidden">
+                {/* text BOX */}
+                  <div className="i-text__box mb-4">
+                    <p className="text-gray_table opacity-50 text-sm sm:text-base   font-medium">
+                      {langData.diagram_komissiya}
+                    </p>
+                    <p className="text-gray_table text-sm sm:text-base uppercase">{langData.diagram_komissiya_summa}</p>
+                  </div>
+                </div>
+
+                <div className="info__text i-text md:hidden">
+                {/* text BOX */}
+                  <div className="i-text__box mb-4">
+                    <p className="text-gray_table opacity-50 text-sm sm:text-base   font-medium">
+                      {langData.diagram_pribl_name}
+                    </p>
+                    <p className="text-gray_table text-sm sm:text-base   uppercase">{langData.diagram_pribl2_summa}</p>
+                  </div>
                 </div>
               </div>
               {/* table BLOCK */}
-              <div className="info__table i-table">
-                <div className="i-table__head px-2 py-3.5 bg-main_color">
-                  <p className="text-sm sm:text-base   text-white">lorem</p>
+              <div className="flex">
+                {/* TABLE DIAGRAMM ITEM */}
+                <div className="info__table i-table md:w-2/3 xs:w-full sm:w-full md:mt-auto md:mb-0">
+                  <div className="i-table__head px-2 py-3.5 bg-main_color">
+                    <p className="text-sm sm:text-base   text-white">{langData.diagram_pribl2}</p>
+                  </div>
+                  <div className="i-table__subhead px-2.5 bg-main_color_middle lg:py-3.5">
+                    <p className="text-sm sm:text-base   text-white">{langData.diagram_komissiya}</p>
+                  </div>
+                  <div className="i-table__body align-middle px-2.5 py-36 bg-main_color_light">
+                    {/* text BOX */}
+                    <div className="i-text__box mb-4">
+                      <p className="text-gray_table opacity-50 text-sm sm:text-base font-medium">
+                        {langData.diagram_sebest}
+                      </p>
+                      <p className="text-gray_table text-sm sm:text-base md:hidden  uppercase">{langData.diagram_sebest_summa2}</p>
+                    </div>
+                  </div>
                 </div>
-                <div className="i-table__subhead px-2.5 bg-main_color_middle">
-                  <p className="text-sm sm:text-base   text-white">lorem</p>
-                </div>
-                <div className="i-table__body align-middle px-2.5 py-20 bg-main_color_light">
-                  {/* text BOX */}
-                  <div className="i-text__box mb-4">
-                    <p className="text-gray_table opacity-50 text-sm sm:text-base   font-medium">
-                      lroem1
-                    </p>
-                    <p className="text-gray_table text-sm sm:text-base   uppercase">lroem1</p>
+                {/* TABLE TEXT ITEM */}
+                <div className="info__table i-table md:block xs:hidden md:w-1/3">
+                  <div className="i-table__head px-2 py-3.5">
+                    <p className="text-sm sm:text-base lg:text-base text-black">{langData.diagram_pribl2_summa}</p>
+                  </div>
+                  <div className="i-table__subhead px-2.5 py-3.5 border-t-2 border-b-2">
+                    <p className="text-sm sm:text-base lg:text-base text-black">{langData.diagram_komissiya_summa} </p>
+                  </div>
+                  <div className="i-table__body align-middle px-2.5 py-36">
+                    {/* text BOX */}
+                    <div className="i-text__box mb-4">
+                      <p className="text-gray_table text-sm sm:text-base lg:text-base">{langData.diagram_sebest_summa2}</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -196,9 +291,33 @@ function App() {
             {langData.service_item7_text}
           </p>
         </div> */}
-        <SerciseItemTemplate itemNum={"07"} itemTitle={langData.service_item7_title} itemText={langData.service_item7_text}/>
+      </div>
+{/* <p className="leading-[18px] xs:text-sm sm:text-base sm:w-5/6 sm:ml-auto md:w-1/2">
+            {itemText}
+          </p> */}
+      <div className="relative md:mb-80 xl:mb-96">
+        <div className="container">
+          <SerciseItemTemplate itemNum={"07"} itemTitle={langData.service_item7_title} itemText={langData.service_item7_text}/>
+        </div>
 
-        <SerciseItemTemplate itemNum={"08"} itemTitle={langData.service_item8_title} itemText={langData.service_item8_text}/>
+        <img className="flex sm:w-11/12 md:w-2/3 lg:w-2/3 xl:w-7/12 md:absolute md:top-8 lg:mt-12 xl:mt-2 xs:mb-4 -z-10" src={karta} alt="karta" />
+
+        <div className="container">
+            <div className=" leading-[18px] xs:text-sm sm:text-base sm:w-5/6 sm:ml-auto md:w-1/2 md:mt-40 lg:mt-16 xl:mt-20">
+              <div className="flex items-start sm:items-center">
+                <div className="w-[15px] h-[15px] bg-main_color mr-[10px]"></div>
+                <p className="">{langData.contained_regions}</p>
+              </div>
+              <div className="flex items-center md:mt-5">
+                <div className="w-[15px] h-[15px] border-2 mr-[10px]"></div>
+                <p className="">{langData.planned_regions}</p>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div className="container">
+        
+        <SerciseItemTemplate className="" itemNum={"08"} itemTitle={langData.service_item8_title} itemText={langData.service_item8_text}/>
       </div>
 
 
@@ -207,7 +326,7 @@ function App() {
         <div className="container ">
 
           <div className="relative xs:h-[160px] sm:h-[200px] md:h-[250px] lg:h-[330px]">
-            <div className="form_section_card xs:py-[40px] xs:px-[10px] sm:py-12 sm:px-4 bg-gray_form absolute top-1/2 md:flex">
+            <div className="form_section_card xs:py-[40px] xs:px-[10px] sm:py-12 sm:px-4 md:px-[30px] lg:py-[60px] bg-gray_form absolute top-1/2 md:flex">
               <div className="md:w-1/2">
                 <h3 className="font-medium text-base uppercase sm:text-[18px] lg:text-[20px]">
                   {langData.partners_header}
