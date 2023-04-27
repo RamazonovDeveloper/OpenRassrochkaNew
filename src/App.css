@@ -1,6 +1,9 @@
 .form_section {
     background: url('./assets/BG.png');
-    background-size: contain;
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .hero {
@@ -24,6 +27,7 @@
     left: -25%;
     z-index: -1;
 }
+
 
 @media screen and (min-width:414px) {
     .hero::after {
@@ -49,6 +53,43 @@
     }
 }
 
+.my_section_name{
+    position: relative;
+}
+
+.my_section_name::before{
+    position: absolute;
+    display: none;
+    width: 17px;
+    top: 50%;
+    left: 0;
+    height: 1px;
+    background-color: #4E0F8A;
+    content: '';
+    /* margin-right: 40px; */
+}
+
+@media screen and (min-width:768px) {
+    .my_section_name::before {
+        display: flex;
+    }
+
+    .my_section_name > p{
+        margin-left: 30px;
+    }
+}
+
+@media screen and (min-width:1440px) {
+    .my_section_name::before {
+        width: 30px;
+        /* display: flex; */
+    }
+
+    .my_section_name > p{
+        margin-left: 70px;
+    }
+}
+
 .my_input {
     border: 1px solid rgba(118, 118, 128, 0.07);
     border-radius: 2px;
@@ -65,6 +106,6 @@
     background-repeat: no-repeat;
     background-position: center;
 
-    background-size: contain;
+    /* background-size: contain; */
     color: #4f0f8a33;
 }

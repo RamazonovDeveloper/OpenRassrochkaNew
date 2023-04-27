@@ -32,7 +32,7 @@ function App() {
 
   return (
     <div className="">
-      {/* HEADER SECTION START */}
+      {/* NAVBAR SECTION START */}
       <div className="container">
         <div className="flex justify-end gap-x-3.5 mt-11 mb-2">
           <div
@@ -59,7 +59,7 @@ function App() {
           </div>
         </div>
       </div>
-      {/* HEADER SECTION END */}
+      {/* NAVBAR SECTION END */}
 
       {/* HERO SECTION START */}
       <div className="hero overflow-hidden w-full min-h-[700px] xl:pl-[10%] flex flex-col justify-between">
@@ -81,35 +81,44 @@ function App() {
       </div>
       {/* HERO SECTION END */}
 
+
+      {/* SERVICE SECTION HEADER */}
       <div className="container mt-[56px] ">
-        <div className="flex text-main_color font-medium text-[14px] mb-10">
+        <div className="my_section_name flex text-main_color font-medium xs:text-sm sm:text-base md:text-sm lg:text-base mb-10">
           <p className="uppercase">{langData.service_name}</p>
         </div>
         <div className="text-base mt-4 font-medium">
           {/* <p className='uppercase text-[25px] text-main_color leading-7 font-light'>Open <span className='text-black'>muddatli kartasi</span> - Bu biznesingiz o’sishi va rivojlanishi</p> */}
           {lang === "uz" ? (
-            <p className="uppercase text-[25px] text-main_color leading-7 font-light">
+            <p className="sm:w-11/12 md:w-9/12 lg:w-8/12 sm:ml-auto sm:mr-0 uppercase xs:text-[25px] sm:text-[27px] md:text-[40px] lg:text-[50px] xl:text-[60px] text-main_color xs:leading-7 sm:leading-8 md:leading-[46px] lg:leading-[58px] xl:leading-[70px] font-light">
               Open <span className="text-black">muddatli kartasi</span> - Bu
               biznesingiz o’sishi va rivojlanishi
             </p>
           ) : (
-            <p className="uppercase text-[25px] text-main_color leading-7 font-light">
+            <p className="sm:w-11/12 md:w-9/12 lg:w-8/12 sm:ml-auto sm:mr-0 uppercase xs:text-[25px] sm:text-[27px] md:text-[40px] lg:text-[50px] xl:text-[60px] text-main_color xs:leading-7 sm:leading-8 md:leading-[46px] lg:leading-[58px] xl:leading-[70px] font-light">
               <span className="text-black">Карта рассрочки</span> open{" "}
               <span className="text-black">- это</span> рост{" "}
               <span className="text-black">и</span> развитие{" "}
               <span className="text-black">вашего</span> бизнеса
             </p>
           )}
-          <div className="text-base mt-4 font-medium">
+          <div className="sm:ml-auto sm:mr-0 sm:w-11/12 md:w-9/12 lg:w-8/12 xs:text-sm sm:text-base mt-4 font-medium">
             <p>{langData.service_text1}</p>
             <p>{langData.service_text2}</p>
           </div>
         </div>
       </div>
+      {/* SERVICE SECTION HEADER END */}
 
-      <div className="info">
-        <div className="container">
-          <div className="info__body flex justify-between  min-h-[578px]">
+
+
+      
+
+      {/* SERVICE SECTION ITEMS */}
+      <div className="container">
+        <SerciseItemTemplate itemNum={"01"} itemTitle={langData.service_item1_title}/>
+        {/* SERVICE ITEM 1 DIAGRAMM */}
+        <div className="info__body flex justify-between  min-h-[578px]">
             {/* info ROW */}
             <div className="info__row w-[48.3%] flex flex-col justify-between">
               {/* text BLOCK */}
@@ -171,30 +180,14 @@ function App() {
               </div>
             </div>
           </div>
-        </div>
-      </div>
-
-      <div className="container">
-        <div className="my-10 font-medium">
-          <p className="uppercase text-[14px] font-medium mb-[14px]">
-            <span className="text-main_color mr-2">01</span>
-            {langData.service_item1_title}
-          </p>
-        </div>
+        {/* SERVICE ITEM 1 DIAGRAMM END*/}
+        
         <SerciseItemTemplate itemNum={"02"} itemTitle={langData.service_item2_title}/>
         <SerciseItemTemplate itemNum={"03"} itemTitle={langData.service_item3_title} itemText={langData.service_item3_text}/>
-        <div className="my-10 font-medium">
-          <p className="uppercase text-[14px] font-medium mb-[14px]">
-            <span className="text-main_color mr-2">04</span>
-            {langData.service_item4_title}
-          </p>
-          <p className="leading-[18px] text-[14px]">
-            {langData.service_item4_text}
-          </p>
-        </div>
+        <SerciseItemTemplate itemNum={"04"} itemTitle={langData.service_item4_title} itemText={langData.service_item4_text}/>
         <SerciseItemTemplate itemNum={"05"} itemTitle={langData.service_item5_title} itemText={langData.service_item5_text}/>
         <SerciseItemTemplate itemNum={"06"} itemTitle={langData.service_item6_title} itemText={langData.service_item6_text}/>
-        <div className="my-10 font-medium">
+        {/* <div className="my-10 font-medium">
           <p className="uppercase text-[14px] font-medium mb-[14px]">
             <span className="text-main_color mr-2">07</span>
             {langData.service_item7_title}
@@ -202,9 +195,14 @@ function App() {
           <p className="leading-[18px] text-[14px]">
             {langData.service_item7_text}
           </p>
-        </div>
+        </div> */}
+        <SerciseItemTemplate itemNum={"07"} itemTitle={langData.service_item7_title} itemText={langData.service_item7_text}/>
+
         <SerciseItemTemplate itemNum={"08"} itemTitle={langData.service_item8_title} itemText={langData.service_item8_text}/>
       </div>
+
+
+      {/* FORM SECTION */}
       <div className="form_section xs:h-[160px] sm:h-[200px] md:h-[250px] lg:h-[330px]">
         <div className="container ">
 
@@ -239,41 +237,37 @@ function App() {
           </div>
         </div>
       </div>
-      {/* <div className="form_section relative h-[160px]">
-        <div className="container">
-          <div className="form_section_card xs:py-[40px] xs:px-[10px] sm:py-12 sm:px-4 bg-gray_form absolute top-3/4 md:flex">
-            <div className="md:w-1/2">
-              <h3 className="font-medium text-base uppercase sm:text-[18px] lg:text-[20px]">
-                {langData.partners_header}
-              </h3>
-              <p className="xs:text-[14px] sm:text-base my-6 font-medium lg:w-3/4 sm:mt-8">
-                {langData.partners_text}
-              </p>
-            </div>
-            <div className="md:w-1/2">
-              <input
-                className="w-full py-3 px-2 bg-gray_input text-base text-black my_input"
-                type="text"
-                placeholder={langData.partners_input_name}
-              />
-              <input
-                className="w-full py-3 px-2 bg-gray_input text-base text-black my_input xs:mt-4 xs:mb-6 sm:mt-5 sm:mb-11 xl:mb-[60px]"
-                type="text"
-                placeholder={langData.partners_input_tel}
-              />
-              {/* <input type="text" placeholder={langData.partners_input_tel}/> */}
-              {/*  xs:mt-6 xs:mb-10 sm:m */}
-              {/* <button className="w-full bg-main_color text-white py-3 uppercase">
-                {langData.partners_btn}
-              </button>
-            </div>
+
+      {/* Новые возможности  для развития карточного бизнеса   */}
+      
+      {/* BANKS SECTION */}
+      <div className="container md:mt-[280px] sm:mt-[430px] xs:mt-[410px]">
+        <div className="my_section_name flex text-main_color font-medium xs:text-sm sm:text-base md:text-sm lg:text-base mb-10">
+          <p className="uppercase">{langData.banks_name}</p>
+        </div>
+        <div className="text-base mt-4 font-medium">
+          {/* <p className='uppercase text-[25px] text-main_color leading-7 font-light'>Open <span className='text-black'>muddatli kartasi</span> - Bu biznesingiz o’sishi va rivojlanishi</p> */}
+          {lang === "uz" ? (
+            <p className="sm:w-11/12 md:w-9/12 lg:w-8/12 sm:ml-auto sm:mr-0 uppercase xs:text-[25px] sm:text-[27px] md:text-[40px] lg:text-[50px] xl:text-[60px] text-main_color xs:leading-7 sm:leading-8 md:leading-[46px] lg:leading-[58px] xl:leading-[70px] font-light">
+            <span className="text-black">Biz karta </span> biznesini rivojlantirish  <span className="text-black">uchun yangi</span> imkoniyatlar <span className="text-black">taqdim etamiz</span></p>
+          ) : (
+            <p className="sm:w-11/12 md:w-9/12 lg:w-8/12 sm:ml-auto sm:mr-0 uppercase xs:text-[25px] sm:text-[27px] md:text-[40px] lg:text-[50px] xl:text-[60px] text-main_color xs:leading-7 sm:leading-8 md:leading-[46px] lg:leading-[58px] xl:leading-[70px] font-light">
+              <span className="text-black">Новые</span> возможности{" "}
+              <span className="text-black">для</span> развития{" "}
+              <span className="text-black">карточного</span> бизнеса{" "}
+            </p>
+          )}
+          <div className="sm:ml-auto sm:mr-0 sm:w-11/12 md:w-9/12 lg:w-8/12 xs:text-sm sm:text-base mt-4 font-medium">
+            <p>{langData.banks_text}</p>
           </div>
         </div>
-      </div> */}
+      </div>
 
+
+      {/* FOOTER SECTION */}
       <div className="footer mt-[500px] py-[78px]">
         <div className="container">
-          <div className="bg-gray_light xs:py-8 xs:px-2.5 sm:p-[30px] max-w-sm mx-auto">
+          <div className="bg-gray_light text-black xs:py-8 xs:px-2.5 sm:p-[30px] max-w-sm mx-auto">
             <p className="uppercase font-medium">{langData.decision}</p>
             <div className="flex items-center mt-7 mb-[20px] font-medium">
               <img className="mr-4" src={message} alt="" />
