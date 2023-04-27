@@ -468,8 +468,8 @@ function App() {
       <div className=" mt-10 ">
         {/* BANK CARD 1 */}
         {/* sm:mr-0 sm:w-11/12 md:w-9/12 lg:w-8/12 */}
-        <div className="md:flex md:align-bottom md:flex-row-reverse justify-between">
-          <div className="xs:w-[96%] md:w-1/2 lg:w xs:ml-auto bg-main_color xs:py-[74px] xs:px-2.5 sm:px-5 md:px-[30px] md:py-[90px] text-white text-base relative sm:mr-0 sm:w-11/12 ">
+        <div className="md:flex md:align-bottom md:flex-row-reverse justify-between items-end">
+          <div className="xs:w-[96%] md:w-1/2 xs:ml-auto bg-main_color xs:py-[74px] xs:px-2.5 sm:px-5 md:px-[30px] md:py-[90px] text-white text-base relative sm:mr-0 sm:w-11/12 ">
             <p className="absolute xs:top-5 xs:left-2.5 md:left-5 xl:left-[30px] xl:top-[35px] ">
               01
             </p>
@@ -478,7 +478,9 @@ function App() {
             </h1>
             <p>{langData.banks_item1_text}</p>
           </div>
-          <img className="md:w-1/2" src={bank1} alt="" />
+          <div className="md:w-1/2 max-h-[260px] flex justify-center items-end relative z-10">
+            <img className=" " src={bank1} alt="" />
+          </div>
         </div>
 
         <div className="md:flex lg:justify-start">
