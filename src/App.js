@@ -476,6 +476,22 @@ function App() {
             <h1 className="uppercase leading-[20px] mb-4">
               {langData.banks_item1_title}
             </h1>
+          </div>
+        </div>
+      </div>
+
+      <div className=" mt-10 xl:container">
+        {/* BANK CARD 1 */}
+        {/* sm:mr-0 sm:w-11/12 md:w-9/12 lg:w-8/12 */}
+        <div className="md:flex md:align-bottom md:flex-row-reverse justify-between">
+          <div className="xs:w-[96%] md:w-1/2 lg:w xs:ml-auto bg-main_color xs:py-[74px] xs:px-2.5 sm:px-5 md:px-[30px] md:py-[90px] lg:py-[148px] text-white text-base relative sm:mr-0 sm:w-11/12 ">
+            <p className="absolute xs:top-5 xs:left-2.5 md:left-5 xl:left-[30px] xl:top-[35px]">
+              01
+            </p>
+            <h1 className="uppercase leading-[20px] mb-4">
+              {langData.banks_item1_title}
+            </h1>
+
             <p>{langData.banks_item1_text}</p>
           </div>
           <img className="md:w-1/2" src={bank1} alt="" />
@@ -483,69 +499,113 @@ function App() {
 
         <div className="md:flex lg:justify-start">
           {/* BANK CARD 2 */}
+
           <div className="xs:py-[54px] md:w-1/2 lg:w-[40%] xs:px-2.5 xs:text-black text-base relative sm:bg-main_color sm:text-white sm:w-11/12">
             <p className="absolute top-5 left-2.5 ">02</p>
             <h1 className="uppercase leading-[20px] mb-4 ">
               {langData.banks_item2_title}
             </h1>
+          </div>
+
+          <div className="xs:py-[54px] md:w-1/2 lg:w-[40%] xs:px-2.5 sm:px-5 md:px-[30px] md:py-[71px] lg:py-[100px] xs:text-black text-base relative sm:bg-main_color sm:text-white sm:w-11/12">
+            <p className="absolute xs:top-5 xs:left-2.5 sm:left-[16px] md:left-5 xl:left-[30px] xl:top-[35px]">
+              02
+            </p>
+            <h1 className="uppercase leading-[20px] mb-4 ">
+              {langData.banks_item2_title}
+            </h1>
+
             <p>{langData.banks_item2_text}</p>
           </div>
 
           {/* BANK CARD 3 */}
+
           <div className="w-[96%] md:w-1/2 lg:w-[40%] ml-auto xs:bg-main_color xs:py-[74px] xs:px-2.5 xs:text-white text-base relative sm:w-11/12 sm:bg-transparent sm:text-black">
             <p className="absolute top-5 left-2.5">03</p>
             <h1 className="uppercase leading-[20px] mb-4">
               {langData.banks_item3_title}
             </h1>
-            <p>{langData.banks_item3_text}</p>
-          </div>
-        </div>
-
-        {/* BANK CARD 4 */}
-        <div className="md:flex lg:w-[60%] lg:ml-auto justify-between">
-          <div className="xs:py-[74px] md:w-1/2 xs:px-2.5 text-black text-base relative">
-            <p className="absolute top-5 left-2.5">04</p>
-            <h1 className="uppercase leading-[20px] mb-4">
-              {langData.banks_item4_title}
-            </h1>
-            <p>{langData.banks_item4_text}</p>
-          </div>
-          <img className=" md:w-1/2" src={bank2} alt="" />
-        </div>
-
-        <div className="md:flex justify-between">
-          {/* BANK CARD 5 */}
-          <div className="w-[96%] xs:ml-auto sm:mr-auto sm:ml-0 xs:bg-main_color md:bg-transparent xs:pt-[50px] xs:pb-[30px] xs:px-2.5 xs:text-white md:text-black text-base relative sm:w-11/12">
-            <p className="absolute top-5 left-2.5">05</p>
-            <h1 className="uppercase leading-[20px] mb-4">
-              {langData.banks_item5_title}
-            </h1>
-            <p>{langData.banks_item5_text}</p>
-          </div>
-
-          {/* BANK CARD 6 */}
-          <div className="xs:pt-[50px] xs:pb-[30px] xs:px-2.5 md:bg-main_color xs:text-black md:text-white text-base relative sm:ml-auto sm:w-11/12">
-            <p className="absolute top-5 left-2.5">06</p>
-            <h1 className="uppercase leading-[20px] mb-4">
-              {langData.banks_item6_title}
-            </h1>
-            <p>{langData.banks_item6_text}</p>
-          </div>
-        </div>
-      </div>
-
-      {/* FOOTER SECTION */}
-      <div className="footer mt-[100px] py-[78px]">
-        <div className="container">
-          <div className="bg-gray_light text-black xs:py-8 xs:px-2.5 sm:p-[30px] max-w-sm mx-auto">
-            <p className="uppercase font-medium">{langData.decision}</p>
-            <div className="flex items-center mt-7 mb-[20px] font-medium">
-              <img className="mr-4" src={message} alt="" />
-              <p>hello@opentech.uz</p>
+            <div className="w-[96%] md:w-1/2 lg:w-[40%] ml-auto xs:bg-main_color xs:py-[74px] xs:px-2.5 md:px-[30px] md:py-[71px] lg:py-[100px] xs:text-white text-base relative sm:w-11/12 sm:bg-transparent sm:text-black">
+              <p className="absolute xs:top-5 xs:left-2.5 md:left-5  xl:left-[30px] xl:top-[35px]">
+                03
+              </p>
+              <h1 className="uppercase leading-[20px] mb-4">
+                {langData.banks_item3_title}
+              </h1>
+              <p>{langData.banks_item3_text}</p>
             </div>
-            <div className="flex items-center font-medium">
-              <img className="mr-4" src={phone} alt="" />
-              <p> +998 (90) 968-7881</p>
+          </div>
+
+          {/* BANK CARD 4 */}
+          <div className="md:flex lg:w-[60%] lg:ml-auto justify-between">
+            <div className="xs:py-[74px] md:w-1/2 xs:px-2.5 text-black text-base relative">
+              <p className="absolute top-5 left-2.5">04</p>
+              <h1 className="uppercase leading-[20px] mb-4">
+                {langData.banks_item4_title}
+              </h1>
+              <div className="xs:py-[74px] md:w-1/2 xs:px-2.5 sm:px-5 md:px-[30px] md:py-[71px] lg:py-[100px] text-black text-base relative">
+                <p className="absolute xs:top-5 xs:left-2.5 md:left-5 xl:left-[30px] xl:top-[35px]">
+                  04
+                </p>
+                <h1 className="uppercase leading-[20px] mb-4">
+                  {langData.banks_item4_title}
+                </h1>
+                <p>{langData.banks_item4_text}</p>
+              </div>
+            </div>
+            <img className=" md:w-1/2" src={bank2} alt="" />
+          </div>
+
+          <div className="md:flex justify-between">
+            {/* BANK CARD 5 */}
+            <div className="w-[96%] xs:ml-auto sm:mr-auto sm:ml-0 xs:bg-main_color md:bg-transparent xs:pt-[50px] xs:pb-[30px] xs:px-2.5 xs:text-white md:text-black text-base relative sm:w-11/12">
+              <p className="absolute top-5 left-2.5">05</p>
+              <h1 className="uppercase leading-[20px] mb-4">
+                {langData.banks_item5_title}
+              </h1>
+              <div className="w-[96%] xs:ml-auto sm:mr-auto sm:ml-0 xs:bg-main_color md:bg-transparent xs:pt-[50px] xs:pb-[30px] sm:px-5 md:px-[30px] md:py-[71px] lg:py-[100px] xs:px-2.5 xs:text-white md:text-black text-base relative sm:w-11/12">
+                <p className="absolute xs:top-5 xs:left-2.5 md:left-5 xl:left-[30px] xl:top-[35px]">
+                  05
+                </p>
+                <h1 className="uppercase leading-[20px] mb-4">
+                  {langData.banks_item5_title}
+                </h1>
+                <p>{langData.banks_item5_text}</p>
+              </div>
+
+              {/* BANK CARD 6 */}
+              <div className="xs:pt-[50px] xs:pb-[30px] xs:px-2.5 md:bg-main_color xs:text-black md:text-white text-base relative sm:ml-auto sm:w-11/12">
+                <p className="absolute top-5 left-2.5">06</p>
+                <h1 className="uppercase leading-[20px] mb-4">
+                  {langData.banks_item6_title}
+                </h1>
+                <div className="xs:pt-[50px] xs:pb-[30px] xs:px-2.5 sm:px-5 md:px-[30px] md:py-[71px] lg:py-[100px] md:bg-main_color xs:text-black md:text-white text-base relative sm:ml-auto sm:w-11/12">
+                  <p className="absolute xs:top-5 xs:left-2.5 md:left-5 xl:left-[30px] xl:top-[35px]">
+                    06
+                  </p>
+                  <h1 className="uppercase leading-[20px] mb-4">
+                    {langData.banks_item6_title}
+                  </h1>
+                  <p>{langData.banks_item6_text}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* FOOTER SECTION */}
+          <div className="footer mt-[100px] py-[78px]">
+            <div className="container">
+              <div className="bg-gray_light text-black xs:py-8 xs:px-2.5 sm:p-[30px] max-w-sm mx-auto">
+                <p className="uppercase font-medium">{langData.decision}</p>
+                <div className="flex items-center mt-7 mb-[20px] font-medium">
+                  <img className="mr-4" src={message} alt="" />
+                  <p>hello@opentech.uz</p>
+                </div>
+                <div className="flex items-center font-medium">
+                  <img className="mr-4" src={phone} alt="" />
+                  <p> +998 (90) 968-7881</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
