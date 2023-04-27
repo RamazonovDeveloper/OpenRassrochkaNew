@@ -1,39 +1,9 @@
 .form_section {
     background: url('./assets/BG.png');
-    
+
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-}
-
-/* .info__body{
-    position: relative;
-}
-
-.info__body::before{
-    content: '';
-    width: 342px;
-    height: 500px;
-    position: absolute;
-    top: -20px;
-    left: 75px;
-    background: #ECF0F3;
-    z-index: -2;
-} */
-
-
-@media screen and (min-width:768px) {
-    .info__body::before {
-        width: 747px;
-        height: 105%;
-        /* right: 20px; */
-        left: -37px;
-        top: -27px;
-    }
-}
-
-.hero {
-    position: relative;
 }
 
 .hero::before {
@@ -55,35 +25,7 @@
 }
 
 
-@media screen and (min-width:414px) {
-    .hero::after {
-        left: -10%;
-    }
-}
-
-@media screen and (min-width:600px) {
-    .hero::after {
-        left: 10%;
-    }
-}
-
-@media screen and (min-width:768px) {
-    .hero::after {
-        left: 30%;
-    }
-}
-
-@media screen and (min-width:1440px) {
-    .hero::after {
-        left: 40%;
-    }
-}
-
-.my_section_name{
-    position: relative;
-}
-
-.my_section_name::before{
+.my_section_name::before {
     position: absolute;
     display: none;
     width: 17px;
@@ -93,27 +35,6 @@
     background-color: #4E0F8A;
     content: '';
     /* margin-right: 40px; */
-}
-
-@media screen and (min-width:768px) {
-    .my_section_name::before {
-        display: flex;
-    }
-
-    .my_section_name > p{
-        margin-left: 30px;
-    }
-}
-
-@media screen and (min-width:1440px) {
-    .my_section_name::before {
-        width: 30px;
-        /* display: flex; */
-    }
-
-    .my_section_name > p{
-        margin-left: 70px;
-    }
 }
 
 .my_input {
@@ -134,4 +55,120 @@
 
     /* background-size: contain; */
     color: #4f0f8a33;
+}
+
+.info::before {
+    content: '';
+    background: #ECF0F3;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    width: 75%;
+    height: 500px;
+    z-index: -1;
+}
+
+.info::after {
+    content: url('./assets/boy.png');
+    position: absolute;
+    bottom: 0;
+    right: -100px;
+    display: none;
+}
+
+.images::before {
+    content: '';
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #ECF0F3;
+    z-index: -1;
+}
+
+
+@media screen and (min-width:414px) {
+    .hero::after {
+        left: -10%;
+    }
+
+    .images::before {
+        width: 80%;
+        right: unset;
+    }
+}
+
+@media screen and (min-width:600px) {
+    .hero::after {
+        left: 10%;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .info__body::before {
+        width: 747px;
+        height: 105%;
+        left: -37px;
+        top: -27px;
+    }
+
+    .my_section_name::before {
+        display: flex;
+    }
+
+    .my_section_name>p {
+        margin-left: 30px;
+    }
+
+    .info::before {
+        width: 98%;
+        height: 88%;
+        top: unset;
+        bottom: 0;
+        left: 0;
+    }
+
+    .hero::after {
+        left: 30%;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .info::before {
+        width: 68%;
+    }
+
+    .info::after {
+        display: inline;
+    }
+}
+
+@media screen and (min-width:1440px) {
+    .hero::after {
+        left: 40%;
+    }
+
+    .my_section_name::before {
+        width: 30px;
+        /* display: flex; */
+    }
+
+    .my_section_name>p {
+        margin-left: 70px;
+    }
+
+    .info::before {
+        width: 63%;
+    }
+
+    .info::after {
+        left: 70%;
+        right: unset;
+    }
+
+    .images::before {
+        width: 70%;
+    }
 }
