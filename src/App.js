@@ -10,6 +10,9 @@ import message from "./assets/message.png";
 import phone from "./assets/call.png";
 import karta from "./assets/karta.png";
 
+import bank1 from './assets/bankImg1.png'
+import bank2 from './assets/bankImg2.png'
+
 import { data } from "./data";
 
 function App() {
@@ -292,9 +295,7 @@ function App() {
           </p>
         </div> */}
       </div>
-{/* <p className="leading-[18px] xs:text-sm sm:text-base sm:w-5/6 sm:ml-auto md:w-1/2">
-            {itemText}
-          </p> */}
+
       <div className="relative md:mb-20 lg:mb-[400px] xl:mb-[450px]">
         <div className="container">
           <SerciseItemTemplate itemNum={"07"} itemTitle={langData.service_item7_title} itemText={langData.service_item7_text}/>
@@ -382,9 +383,66 @@ function App() {
         </div>
       </div>
 
+      {/* BANK SECTION ITEM 1 */}
+      
+      <div className=" mt-10 ">
+        {/* BANK CARD 1 */}
+        {/* sm:mr-0 sm:w-11/12 md:w-9/12 lg:w-8/12 */}
+        <div className="md:flex md:align-bottom md:flex-row-reverse justify-between">
+          <div className="xs:w-[96%] md:w-1/2 lg:w xs:ml-auto bg-main_color xs:py-[74px] xs:px-2.5 sm:px-5 md:px-[30px] md:py-[90px] text-white text-base relative sm:mr-0 sm:w-11/12 ">
+            <p className="absolute xs:top-5 xs:left-2.5 md:left-5 xl:left-[30px] xl:top-[35px] ">01</p>
+            <h1 className="uppercase leading-[20px] mb-4">{langData.banks_item1_title}</h1>
+            <p>{langData.banks_item1_text}</p>
+          </div>
+          <img className="md:w-1/2" src={bank1} alt="" />
+        </div>
+
+        <div className="md:flex lg:justify-start">
+          {/* BANK CARD 2 */}
+          <div className="xs:py-[54px] md:w-1/2 lg:w-[40%] xs:px-2.5 xs:text-black text-base relative sm:bg-main_color sm:text-white sm:w-11/12">
+            <p className="absolute top-5 left-2.5 ">02</p>
+            <h1 className="uppercase leading-[20px] mb-4 ">{langData.banks_item2_title}</h1>
+            <p>{langData.banks_item2_text}</p>
+          </div>
+
+          {/* BANK CARD 3 */}
+          <div className="w-[96%] md:w-1/2 lg:w-[40%] ml-auto xs:bg-main_color xs:py-[74px] xs:px-2.5 xs:text-white text-base relative sm:w-11/12 sm:bg-transparent sm:text-black">
+            <p className="absolute top-5 left-2.5">03</p>
+            <h1 className="uppercase leading-[20px] mb-4">{langData.banks_item3_title}</h1>
+            <p>{langData.banks_item3_text}</p>
+          </div>
+        </div>
+        
+        {/* BANK CARD 4 */}
+        <div className="md:flex lg:w-[60%] lg:ml-auto justify-between">
+          <div className="xs:py-[74px] md:w-1/2 xs:px-2.5 text-black text-base relative">
+            <p className="absolute top-5 left-2.5">04</p>
+            <h1 className="uppercase leading-[20px] mb-4">{langData.banks_item4_title}</h1>
+            <p>{langData.banks_item4_text}</p>
+          </div>
+          <img className=" md:w-1/2" src={bank2} alt="" />
+        </div>
+
+        <div className="md:flex justify-between">
+          {/* BANK CARD 5 */}
+          <div className="w-[96%] xs:ml-auto sm:mr-auto sm:ml-0 xs:bg-main_color md:bg-transparent xs:pt-[50px] xs:pb-[30px] xs:px-2.5 xs:text-white md:text-black text-base relative sm:w-11/12">
+            <p className="absolute top-5 left-2.5">05</p>
+            <h1 className="uppercase leading-[20px] mb-4">{langData.banks_item5_title}</h1>
+            <p>{langData.banks_item5_text}</p>
+          </div>
+
+          {/* BANK CARD 6 */}
+          <div className="xs:pt-[50px] xs:pb-[30px] xs:px-2.5 md:bg-main_color xs:text-black md:text-white text-base relative sm:ml-auto sm:w-11/12">
+            <p className="absolute top-5 left-2.5">06</p>
+            <h1 className="uppercase leading-[20px] mb-4">{langData.banks_item6_title}</h1>
+            <p>{langData.banks_item6_text}</p>
+          </div>
+        </div>
+
+      </div>
 
       {/* FOOTER SECTION */}
-      <div className="footer mt-[500px] py-[78px]">
+      <div className="footer mt-[100px] py-[78px]">
         <div className="container">
           <div className="bg-gray_light text-black xs:py-8 xs:px-2.5 sm:p-[30px] max-w-sm mx-auto">
             <p className="uppercase font-medium">{langData.decision}</p>
