@@ -128,8 +128,8 @@ function App() {
                 {/* MUDDATLI TO'LOVSIZ */}
                 <div className="info__text i-text mb-4">
                   {/* text BOX */}
-                  <div className="i-text__box">
-                    <p className="text-gray_table opacity-50 text-sm  sm:text-base xs:text-sm  font-medium">
+                  <div className="i-text__box md:flex">
+                    <p className="text-gray_table opacity-50 text-sm  sm:text-base xs:text-sm md:mr-3 font-medium">
                       {langData.diagram_bez_rassrochki_title}
                     </p>
                     <p className="text-gray_table text-sm  sm:text-base xs:text-sm uppercase">{langData.diagram_bez_rassrochki_text}</p>
@@ -139,8 +139,8 @@ function App() {
                 {/* UMUMIY QUYMAT */}
                 <div className="info__text i-text">
                   {/* text BOX */}
-                  <div className="i-text__box mb-4">
-                    <p className="text-gray_table opacity-50 text-sm  sm:text-base  font-medium">
+                  <div className="i-text__box mb-4 md:flex">
+                    <p className="text-gray_table opacity-50 text-sm md:mr-3 sm:text-base  font-medium">
                       {langData.diagram_obsh_stoit_title}
                     </p>
                     <p className="text-gray_table text-sm  sm:text-base">{langData.diagram_obsh_stoit1}</p>
@@ -160,7 +160,7 @@ function App() {
               {/* table BLOCK */}
               <div className="flex">
                 {/* DIAGRAM ITEM */}
-                <div className="info__table i-table md:w-2/3 xs:w-full sm:w-full md:mt-auto md:mb-0">
+                <div className="info__table i-table md:w-2/3 xs:w-full sm:w-full w-full md:mt-auto md:mb-0">
                   <div className="i-table__head px-2 py-3.5 bg-main_color">
                     <p className="text-sm sm:text-base   text-white">{langData.diagram_pribl1}</p>
                   </div>
@@ -176,7 +176,7 @@ function App() {
                 </div>
 
                 {/* DIAGRAM ITEM TEXT */}
-                <div className="info__table i-table  md:block xs:hidden md:w-1/3">
+                <div className="info__table i-table  md:block hidden md:w-1/3">
                   <div className="i-table__head px-2 py-3.5 border-b-2">
                     <p className="text-sm sm:text-base   text-black">{langData.diagram_pribl1_summa}</p>
                   </div>
@@ -258,7 +258,7 @@ function App() {
                   </div>
                 </div>
                 {/* TABLE TEXT ITEM */}
-                <div className="info__table i-table md:block xs:hidden md:w-1/3">
+                <div className="info__table i-table md:block hidden md:w-1/3">
                   <div className="i-table__head px-2 py-3.5">
                     <p className="text-sm sm:text-base lg:text-base text-black">{langData.diagram_pribl2_summa}</p>
                   </div>
@@ -295,7 +295,7 @@ function App() {
 {/* <p className="leading-[18px] xs:text-sm sm:text-base sm:w-5/6 sm:ml-auto md:w-1/2">
             {itemText}
           </p> */}
-      <div className="relative md:mb-80 xl:mb-96">
+      <div className="relative md:mb-20 lg:mb-[400px] xl:mb-[450px]">
         <div className="container">
           <SerciseItemTemplate itemNum={"07"} itemTitle={langData.service_item7_title} itemText={langData.service_item7_text}/>
         </div>
