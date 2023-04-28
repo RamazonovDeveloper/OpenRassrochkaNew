@@ -161,8 +161,20 @@ function App() {
                     <p className="text-gray_table opacity-50 text-sm  sm:text-base  font-medium">
                       {langData.diagram_pribl_name}
                     </p>
-                    <p className="text-gray_table text-sm  sm:text-base  uppercase">
-                      {langData.diagram_pribl1_summa}
+                    <p className="text-gray_table text-sm  sm:text-base">
+                    20%
+                    </p>
+                  </div>
+                </div>
+
+                <div className="info__text i-text mb-4 md:hidden">
+                  {/* text BOX */}
+                  <div className="i-text__box">
+                    <p className="text-gray_table opacity-50 text-sm  sm:text-base  font-medium">
+                      {langData.diagram_pribl_name}
+                    </p>
+                    <p className="text-gray_table text-sm  sm:text-base">
+                    {"22% "+"("+langData.diagram_pribl1_summa+")"}
                     </p>
                   </div>
                 </div>
@@ -226,8 +238,8 @@ function App() {
                     </p>
                   </div>
                 </div>
-
-                <div className="info__text i-text md:block xs:hidden">
+                {/*  md:block xs:hidden */}
+                <div className="info__text i-text">
                   {/* text BOX */}
                   <div className="i-text__box mb-4 md:flex">
                     <p className="text-gray_table opacity-50 text-sm sm:text-base  md:mr-3 font-medium">
@@ -257,8 +269,8 @@ function App() {
                     <p className="text-gray_table opacity-50 text-sm sm:text-base   font-medium">
                       {langData.diagram_pribl_name}
                     </p>
-                    <p className="text-gray_table text-sm sm:text-base   uppercase">
-                      {langData.diagram_pribl2_summa}
+                    <p className="text-gray_table text-sm sm:text-base">
+                      {"22% "+"("+langData.diagram_pribl2_summa+")"}
                     </p>
                   </div>
                 </div>
