@@ -77,11 +77,11 @@ function App() {
         </h1>
 
         {/* hero BLOCK */}
-        <div className="hero__block bg-main_color py-[30px] pl-2.5 pr-7 lg:px-[60px] lg:py-[45px]  max-w-[309px] sm:max-w-[377px] smm:max-w-[400px] md:max-w-[414px] lg:max-w-[574px] xl:max-w-[650px] xl:px-[70px] ">
-          <p className="hero__text text-white text-base sm:text-xl md:uppercase lg:text-[22px] xl:text-[25px] xs:leading-[21px]  sm:leading-[27px]  lg:leading-[30px] xl:leading-[34px]">
+        <div className="hero__block bg-main_color py-[30px] px-2.5 sm:px-4 md:px-5 lg:py-[45px] lg:px-[60px] max-w-[309px] sm:max-w-[377px] smm:max-w-[400px] md:max-w-[414px] lg:max-w-[574px] xl:max-w-[650px] xl:px-[70px] xl:py-[60px]">
+          <p className="hero__text text-[#E8E8E8] text-base sm:text-xl md:uppercase lg:text-[22px] xl:text-[25px] xs:leading-[21px]  sm:leading-[27px]  lg:leading-[30px] xl:leading-[34px]">
             {langData?.header_text1}
           </p>
-          <p className="hero__text text-white text-base sm:text-xl md:uppercase lg:text-[22px] xl:text-[25px] leading-[21px] sm:leading-[27px]  lg:leading-[30px] xl:leading-[34px]">
+          <p className="hero__text text-[#E8E8E8] text-base sm:text-xl md:uppercase lg:text-[22px] xl:text-[25px] leading-[21px] sm:leading-[27px]  lg:leading-[30px] xl:leading-[34px]">
             {langData?.header_text2}
           </p>
         </div>
