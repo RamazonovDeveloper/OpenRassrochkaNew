@@ -491,7 +491,7 @@ function App() {
             <p className="leading-[20px]">{langData.banks_item1_text}</p>
           </div>
           <div className="md:w-1/2 max-h-[260px] flex justify-center items-end relative z-10">
-            <img className=" " src={bank1} alt="" />
+            <img className="" src={bank1} alt="" />
           </div>
         </div>
 
@@ -516,7 +516,7 @@ function App() {
         </div>
 
         {/* BANK CARD 4 */}
-        <div className="md:flex lg:w-[60%] lg:ml-auto justify-between">
+        <div className="md:flex lg:w-[60%] lg:ml-auto justify-between relative">
           <div className="xs:py-[74px] md:w-1/2 xs:px-2.5 sm:px-5 md:px-[30px] md:py-[71px] lg:py-[100px] text-black text-base relative">
             <p className="bank_sections_p_font sm:text-main_color absolute xs:top-5 xs:left-2.5 md:left-5 xl:left-[30px] xl:top-[35px]">04</p>
             <h1 className="uppercase leading-[20px] mb-4">
@@ -524,7 +524,10 @@ function App() {
             </h1>
             <p>{langData.banks_item4_text}</p>
           </div>
-          <img className=" md:w-1/2" src={bank2} alt="" />
+          <div className="md:w-1/2 max-h-[300px] lg:max-h-[800px] flex justify-end items-end z-10 ">
+            {/*  md:w-1/2 */}
+            <img className="lg:-z-10 lg:absolute lg:right-0 lg:bottom-0" src={bank2} alt="" />
+          </div>
         </div>
 
         <div className="md:flex justify-between">
