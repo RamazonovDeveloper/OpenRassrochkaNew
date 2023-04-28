@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import "./App.css";
 
 import SerciseItemTemplate from "./components/SerciseItemTemplate";
@@ -27,6 +27,28 @@ function App() {
   }
 
   const [lang, setLang] = useState(identifyLang);
+
+  const companyRef = useRef()
+  const [isValidCompany, setValidCompany] = useState(true)
+
+  const telRef = useRef()
+  const [isValidTel, setValidTel] = useState(true)
+
+
+  const handleBtnClick = () => {
+    if(!companyRef.current.value){
+      setValidCompany(false)
+    }else{
+      setValidCompany(true)
+    }
+
+    if(!telRef.current.value){
+      setValidTel(false)
+    }else{
+      setValidTel(true)
+    }
+  }
+
 
   const handleLangClick = (name) => {
     localStorage.setItem("lang", name);
@@ -427,18 +449,22 @@ function App() {
               </div>
               <div className="md:w-1/2">
                 <input
-                  className="w-full py-3 px-2 bg-gray_input text-base text-black my_input"
+                  ref={companyRef}
+                  // className="w-full py-3 px-2 bg-gray_input text-base text-black my_input"
+                  className={isValidCompany ? "w-full py-3 px-2 bg-gray_input text-base text-black my_input" :"w-full py-3 px-2 bg-gray_input text-base text-black my_input_invalid"}
                   type="text"
                   placeholder={langData.partners_input_name}
                 />
                 <input
-                  className="w-full py-3 px-2 bg-gray_input text-base text-black my_input xs:mt-4 xs:mb-6 sm:mt-5 sm:mb-11 xl:mb-[60px]"
+                  ref={telRef}
+                  className={isValidTel ? "w-full py-3 px-2 bg-gray_input text-base text-black xs:mt-4 xs:mb-6 sm:mt-5 sm:mb-11 xl:mb-[60px] my_input" : "w-full py-3 px-2 bg-gray_input text-base text-black xs:mt-4 xs:mb-6 sm:mt-5 sm:mb-11 xl:mb-[60px] my_input_invalid"}
+                  // className="w-full py-3 px-2 bg-gray_input text-base text-black xs:mt-4 xs:mb-6 sm:mt-5 sm:mb-11 xl:mb-[60px] my_input"
                   type="text"
                   placeholder={langData.partners_input_tel}
                 />
                 {/* <input type="text" placeholder={langData.partners_input_tel}/> */}
                 {/*  xs:mt-6 xs:mb-10 sm:m */}
-                <button className="w-full bg-main_color text-white py-3 uppercase">
+                <button className="w-full bg-main_color text-white py-3 uppercase" onClick={() => handleBtnClick()}>
                   {langData.partners_btn}
                 </button>
               </div>
@@ -558,11 +584,11 @@ function App() {
             <p className="uppercase font-medium">{langData.decision}</p>
             <div className="flex items-center mt-7 mb-[20px] font-medium">
               <img className="mr-4" src={message} alt="" />
-              <p>hello@opentech.uz</p>
+              <a href="mailto:hello@opentech.uz">hello@opentech.uz</a>
             </div>
             <div className="flex items-center font-medium">
               <img className="mr-4" src={phone} alt="" />
-              <p> +998 (90) 968-7881</p>
+              <a href="tel:998909687881"> +998 (90) 968-7881</a>
             </div>
           </div>
         </div>
