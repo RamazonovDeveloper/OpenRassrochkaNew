@@ -406,7 +406,7 @@ function App() {
         </div>
 
         <img
-          className="flex sm:w-11/12 md:w-2/3 lg:w-2/3 xl:w-7/12 md:absolute md:top-8 lg:mt-12 xl:mt-2 xs:mb-4 -z-10"
+          className="map_image flex sm:w-11/12 md:w-2/3 lg:w-2/3 xl:w-7/12 md:absolute md:top-8 lg:mt-12 xl:mt-2 xs:mb-4 -z-10"
           src={karta}
           alt="karta"
         />

@@ -237,3 +237,9 @@
         margin-top: 80px;
     }
 }
+
+@media screen and (min-width:1700px) {
+    .map_image{
+        width: 980px!important;
+    }
+}
