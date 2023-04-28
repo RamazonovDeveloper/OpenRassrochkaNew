@@ -78,10 +78,10 @@ function App() {
 
         {/* hero BLOCK */}
         <div className="hero__block bg-main_color py-[30px] pl-2.5 pr-7 lg:px-[60px] lg:py-[45px]  max-w-[309px] sm:max-w-[377px] smm:max-w-[400px] md:max-w-[414px] lg:max-w-[574px] xl:max-w-[650px] xl:px-[70px] ">
-          <p className="hero__text text-white text-base sm:text-xl md:uppercase lg:text-[22px] xl:text-[25px]">
+          <p className="hero__text text-white text-base sm:text-xl md:uppercase lg:text-[22px] xl:text-[25px] xs:leading-[21px]  sm:leading-[27px]  lg:leading-[30px] xl:leading-[34px]">
             {langData?.header_text1}
           </p>
-          <p className="hero__text text-white text-base sm:text-xl md:uppercase lg:text-[22px] xl:text-[25px]">
+          <p className="hero__text text-white text-base sm:text-xl md:uppercase lg:text-[22px] xl:text-[25px] leading-[21px] sm:leading-[27px]  lg:leading-[30px] xl:leading-[34px]">
             {langData?.header_text2}
           </p>
         </div>
@@ -362,7 +362,7 @@ function App() {
         </div> */}
       </div>
 
-      <div className="relative md:mb-20 lg:mb-[400px] xl:mb-[450px]">
+      <div className="bank_card_7 relative md:mb-20 lg:mb-[400px] xl:mb-[450px]">
         <div className="container">
           <SerciseItemTemplate
             itemNum={"07"}
@@ -378,7 +378,7 @@ function App() {
         />
 
         <div className="container">
-          <div className=" leading-[18px] xs:text-sm sm:text-base sm:w-5/6 sm:ml-auto md:w-1/2 md:mt-40 lg:mt-16 xl:mt-20">
+          <div className="bank_card_7_items leading-[18px] xs:text-sm sm:text-base sm:w-5/6 sm:ml-auto md:w-1/2 md:mt-40 lg:mt-4 xl:mt-5">
             <div className="flex items-start sm:items-center">
               <div className="w-[15px] h-[15px] bg-main_color mr-[10px]"></div>
               <p className="">{langData.contained_regions}</p>
@@ -465,18 +465,18 @@ function App() {
 
       {/* BANK SECTION ITEM 1 */}
 
-      <div className=" mt-10 xl:container">
+      <div className="bank_section_big mt-10 xl:container">
         {/* BANK CARD 1 */}
         {/* sm:mr-0 sm:w-11/12 md:w-9/12 lg:w-8/12 */}
         <div className="md:flex md:align-bottom md:flex-row-reverse justify-between items-end">
           <div className="xs:w-[96%] md:w-1/2 xs:ml-auto bg-main_color xs:py-[74px] xs:px-2.5 sm:px-5 md:px-[30px] md:py-[90px] text-white text-base relative sm:mr-0 sm:w-11/12 ">
-            <p className="absolute xs:top-5 xs:left-2.5 md:left-5 xl:left-[30px] xl:top-[35px] ">
+            <p className="bank_sections_p_font absolute xs:top-5 xs:left-2.5 sm:left-4 md:left-5 lg:left-[30px] lg:top-[35px] ">
               01
             </p>
             <h1 className="uppercase leading-[20px] mb-4">
               {langData.banks_item1_title}
             </h1>
-            <p>{langData.banks_item1_text}</p>
+            <p className="leading-[20px]">{langData.banks_item1_text}</p>
           </div>
           <div className="md:w-1/2 max-h-[260px] flex justify-center items-end relative z-10">
             <img className=" " src={bank1} alt="" />
@@ -486,7 +486,7 @@ function App() {
         <div className="md:flex ">
           {/* BANK CARD 2 */}
           <div className="xs:py-[54px] md:w-1/2 lg:w-[40%] xs:px-2.5 sm:px-5 md:px-[30px] md:py-[71px] lg:py-[100px] xs:text-black text-base relative sm:bg-main_color sm:text-white sm:w-11/12">
-            <p className="absolute xs:top-5 xs:left-2.5 sm:left-[16px] md:left-5 xl:left-[30px] xl:top-[35px]">02</p>
+            <p className="bank_sections_p_font absolute xs:top-5 xs:left-2.5 sm:left-4 md:left-5 lg:left-[30px] lg:top-[35px]">02</p>
             <h1 className="uppercase leading-[20px] mb-4 ">
               {langData.banks_item2_title}
             </h1>
@@ -495,7 +495,7 @@ function App() {
 
           {/* BANK CARD 3 */}
           <div className="w-[96%] md:w-1/2 lg:w-[40%] xs:bg-main_color xs:py-[74px] xs:px-2.5 md:px-[30px] md:py-[71px] lg:py-[100px] xs:text-white text-base relative sm:w-11/12 sm:bg-transparent sm:text-black">
-            <p className="absolute xs:top-5 xs:left-2.5 md:left-5  xl:left-[30px] xl:top-[35px]">03</p>
+            <p className="bank_sections_p_font sm:text-main_color absolute xs:top-5 xs:left-2.5 sm:left-4 md:left-5 lg:left-[30px] lg:top-[35px]">03</p>
             <h1 className="uppercase leading-[20px] mb-4">
               {langData.banks_item3_title}
             </h1>
@@ -506,7 +506,7 @@ function App() {
         {/* BANK CARD 4 */}
         <div className="md:flex lg:w-[60%] lg:ml-auto justify-between">
           <div className="xs:py-[74px] md:w-1/2 xs:px-2.5 sm:px-5 md:px-[30px] md:py-[71px] lg:py-[100px] text-black text-base relative">
-            <p className="absolute xs:top-5 xs:left-2.5 md:left-5 xl:left-[30px] xl:top-[35px]">04</p>
+            <p className="bank_sections_p_font sm:text-main_color absolute xs:top-5 xs:left-2.5 md:left-5 xl:left-[30px] xl:top-[35px]">04</p>
             <h1 className="uppercase leading-[20px] mb-4">
               {langData.banks_item4_title}
             </h1>
@@ -518,7 +518,7 @@ function App() {
         <div className="md:flex justify-between">
           {/* BANK CARD 5 */}
           <div className="w-[96%] xs:ml-auto sm:mr-auto sm:ml-0 xs:bg-main_color md:bg-transparent xs:pt-[50px] xs:pb-[30px] sm:px-5 md:px-[30px] md:py-[71px] lg:py-[100px] xs:px-2.5 xs:text-white md:text-black text-base relative sm:w-11/12">
-            <p className="absolute xs:top-5 xs:left-2.5 md:left-5 xl:left-[30px] xl:top-[35px]">05</p>
+            <p className="bank_sections_p_font md:text-main_color absolute xs:top-5 xs:left-2.5 md:left-5 xl:left-[30px] xl:top-[35px]">05</p>
             <h1 className="uppercase leading-[20px] mb-4">
               {langData.banks_item5_title}
             </h1>
@@ -527,7 +527,7 @@ function App() {
 
           {/* BANK CARD 6 */}
           <div className="xs:pt-[50px] xs:pb-[30px] xs:px-2.5 sm:px-5 md:px-[30px] md:py-[71px] lg:py-[100px] md:bg-main_color xs:text-black md:text-white text-base relative sm:ml-auto sm:w-11/12">
-            <p className="absolute xs:top-5 xs:left-2.5 md:left-5 xl:left-[30px] xl:top-[35px]">06</p>
+            <p className="bank_sections_p_font absolute xs:top-5 xs:left-2.5 md:left-5 xl:left-[30px] xl:top-[35px]">06</p>
             <h1 className="uppercase leading-[20px] mb-4">
               {langData.banks_item6_title}
             </h1>

@@ -46,6 +46,15 @@
     color: rgba(0, 0, 0, 0.6);
 }
 
+.bank_section_big{
+    font-family: 'Inter', sans-serif;
+}
+
+.bank_sections_p_font{
+    font-family: 'Manrope', sans-serif;
+}
+
+
 .footer {
     background: url('./assets/foot_img.png');
 
@@ -170,5 +179,56 @@
 
     .images::before {
         width: 70%;
+    }
+}
+
+
+@media screen and (min-width:920px) {
+    .bank_card_7{
+        margin-bottom: 100px;
+    }
+
+    .bank_card_7_items{
+        margin-top: 200px;
+    }
+}
+
+@media screen and (min-width:990px) {
+    .bank_card_7{
+        margin-bottom: 120px;
+    }
+    
+    .bank_card_7_items{
+        margin-top: 240px;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .bank_card_7{
+        margin-bottom: 300px;
+    }
+
+    .bank_card_7_items{
+        margin-top: 100px;
+    }
+}
+
+@media screen and (min-width:1100px) {
+    .bank_card_7{
+        margin-bottom: 350px;
+    }
+
+    .bank_card_7_items{
+        margin-top: 80px;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .bank_card_7{
+        margin-bottom: 500px;
+    }
+
+    .bank_card_7_items{
+        margin-top: 80px;
     }
 }
