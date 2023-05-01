@@ -91,21 +91,25 @@ function App() {
       {/* NAVBAR SECTION END */}
 
       {/* HERO SECTION START */}
-      <div className="hero overflow-hidden w-full min-h-[700px] xl:pl-[10%] flex flex-col justify-between relative">
-        {/* hero TITLE */}
-        <h1 className="hero__title text-black text-uppercase text-[35px] max-w-[202px] px-4 py-2 sm:text-[40px] lg:text-[50px] xl:text-[60px] smm:max-w-[300px] md:max-w-[550px] md:mt-[140px]">
-          open
-          <p className="text-main_color"> {langData?.header_title}</p>
-        </h1>
+      <div className="xxl:relative w-[100%]">
+        <div className="xxl:container">
+          <div className="hero overflow-hidden w-full min-h-[700px] xl:pl-[10%] xxl:pl-0 flex flex-col justify-between relative xxl:static">
+            {/* hero TITLE */}
+            <h1 className="hero__title text-black text-uppercase text-[35px] max-w-[202px] px-4 py-2 sm:text-[40px] lg:text-[50px] xl:text-[60px] smm:max-w-[300px] md:max-w-[550px] md:mt-[140px]">
+              open
+              <p className="text-main_color"> {langData?.header_title}</p>
+            </h1>
 
-        {/* hero BLOCK */}
-        <div className="hero__block bg-main_color py-[30px] px-2.5 sm:px-4 md:px-5 lg:py-[45px] lg:px-[60px] max-w-[309px] sm:max-w-[377px] smm:max-w-[400px] md:max-w-[414px] lg:max-w-[574px] xl:max-w-[650px] xl:px-[70px] xl:py-[60px]">
-          <p className="hero__text text-[#E8E8E8] text-base sm:text-xl md:uppercase lg:text-[22px] xl:text-[25px] xs:leading-[21px]  sm:leading-[27px]  lg:leading-[30px] xl:leading-[34px]">
-            {langData?.header_text1}
-          </p>
-          <p className="hero__text text-[#E8E8E8] text-base sm:text-xl md:uppercase lg:text-[22px] xl:text-[25px] leading-[21px] sm:leading-[27px]  lg:leading-[30px] xl:leading-[34px]">
-            {langData?.header_text2}
-          </p>
+            {/* hero BLOCK */}
+            <div className="hero__block bg-main_color py-[30px] px-2.5 sm:px-4 md:px-5 lg:py-[45px] lg:px-[60px] max-w-[309px] sm:max-w-[377px] smm:max-w-[400px] md:max-w-[414px] lg:max-w-[574px] xl:max-w-[650px] xl:px-[70px] xl:py-[60px]">
+              <p className="hero__text text-[#E8E8E8] text-base sm:text-xl md:uppercase lg:text-[22px] xl:text-[25px] xs:leading-[21px]  sm:leading-[27px]  lg:leading-[30px] xl:leading-[34px]">
+                {langData?.header_text1}
+              </p>
+              <p className="hero__text text-[#E8E8E8] text-base sm:text-xl md:uppercase lg:text-[22px] xl:text-[25px] leading-[21px] sm:leading-[27px]  lg:leading-[30px] xl:leading-[34px]">
+                {langData?.header_text2}
+              </p>
+            </div>
+          </div>
         </div>
       </div>
       {/* HERO SECTION END */}
@@ -405,11 +409,13 @@ function App() {
           />
         </div>
 
-        <img
-          className="map_image flex sm:w-11/12 md:w-2/3 lg:w-2/3 xl:w-7/12 md:absolute md:top-8 lg:mt-12 xl:mt-2 xs:mb-4 -z-10"
-          src={karta}
-          alt="karta"
-        />
+        <div className="xxl:container xxl:relative">
+          <img
+            className="map_image flex sm:w-11/12 md:w-2/3 lg:w-2/3 xl:w-7/12 md:absolute md:top-8 lg:mt-12 xl:mt-2 xs:mb-4 xxl:mt-14 -z-10"
+            src={karta}
+            alt="karta"
+          />
+        </div>
 
         <div className="container">
           <div className="bank_card_7_items leading-[18px] xs:text-sm sm:text-base sm:w-5/6 sm:ml-auto md:w-1/2 md:mt-40 lg:mt-4 xl:mt-5">

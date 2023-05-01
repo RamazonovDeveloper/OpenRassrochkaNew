@@ -120,6 +120,7 @@
     }
 }
 
+
 @media screen and (min-width:768px) {
     .info__body::before {
         width: 747px;
@@ -188,6 +189,62 @@
 }
 
 
+
+@media screen and (min-width:2000px) {
+    .hero::after {
+        left: 45%;
+        /* right: 50%; */
+    }
+
+    .my_section_name::before {
+        width: 30px;
+    }
+
+    .my_section_name>p {
+        margin-left: 70px;
+    }
+
+    .info::before {
+        width: 63%;
+    }
+
+    .info::after {
+        left: unset;
+        right: 15%;
+    }
+
+    .images::before {
+        width: 70%;
+    }
+}
+
+
+
+@media screen and (min-width:2700px) {
+    
+    .info::after {
+        left: unset;
+        right: 25%;
+    }
+}
+
+@media screen and (min-width:4000px) {
+    
+    .info::after {
+        left: unset;
+        right: 30%;
+    }
+}
+
+@media screen and (min-width:5000px) {
+    
+    .info::after {
+        left: unset;
+        right: 35%;
+    }
+}
+
+
 @media screen and (min-width:920px) {
     .bank_card_7{
         margin-bottom: 100px;
@@ -243,3 +300,17 @@
         width: 980px!important;
     }
 }
+
+
+
+ @media screen and (min-width:2000px) {
+    .map_image{
+        top: -110px;
+    }
+}
+/*
+@media screen and (min-width:3000px) {
+    .map_image{
+        left: 30%;
+    }
+} */
