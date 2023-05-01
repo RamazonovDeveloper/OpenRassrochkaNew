@@ -18,11 +18,42 @@ import mobiles from "./assets/mobiles.png";
 
 import { data } from "./data";
 
+import emailjs from 'emailjs-com';
+import Swal from 'sweetalert2';
+import Cleave from 'cleave.js/react';
+
+const SERVICE_ID = "service_9elghc8";
+const TEMPLATE_ID = "template_o2hb6ck";
+const USER_ID = "WSRBV5ZOthSftBlU0";
+
 function App() {
+  const [phoheNumber, setPhoneNumber] = useState('')
+  
+  const handleOnSubmit = (e) => {
+    e.preventDefault();
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
+      .then((result) => {
+        console.log(result.text);
+        Swal.fire({
+          icon: 'success',
+          title: 'Сообщение успешно отправлено'
+        })
+      }, (error) => {
+        console.log(error.text);
+        Swal.fire({
+          icon: 'error',
+          title: 'Ooops, something went wrong',
+          text: error.text,
+        })
+      });
+    e.target.reset()
+  };
+
   let identifyLang = localStorage.getItem("lang");
 
   if (!identifyLang) {
-    localStorage.setItem("lang", "uz");
+    localStorage.
+    setItem("lang", "uz");
     identifyLang = "uz";
   }
 
@@ -32,22 +63,23 @@ function App() {
   const [isValidCompany, setValidCompany] = useState(true)
 
   const telRef = useRef()
-  const [isValidTel, setValidTel] = useState(true)
+  const [isValidTel, setValidTel] 
+  = useState(true)
 
 
-  const handleBtnClick = () => {
-    if(!companyRef.current.value){
-      setValidCompany(false)
-    }else{
-      setValidCompany(true)
-    }
+  // const handleBtnClick = () => {
+  //   if(!companyRef.current.value){
+  //     setValidCompany(false)
+  //   }else{
+  //     setValidCompany(true)
+  //   }
 
-    if(!telRef.current.value){
-      setValidTel(false)
-    }else{
-      setValidTel(true)
-    }
-  }
+  //   if(!telRef.current.value){
+  //     setValidTel(false)
+  //   }else{
+  //     setValidTel(true)
+  //   }
+  // }
 
 
   const handleLangClick = (name) => {
@@ -448,25 +480,44 @@ function App() {
                 </p>
               </div>
               <div className="md:w-1/2">
-                <input
-                  ref={companyRef}
-                  // className="w-full py-3 px-2 bg-gray_input text-base text-black my_input"
-                  className={isValidCompany ? "w-full py-3 px-2 bg-gray_input text-base text-black my_input" :"w-full py-3 px-2 bg-gray_input text-base text-black my_input_invalid"}
-                  type="text"
-                  placeholder={langData.partners_input_name}
-                />
-                <input
-                  ref={telRef}
-                  className={isValidTel ? "w-full py-3 px-2 bg-gray_input text-base text-black xs:mt-4 xs:mb-6 sm:mt-5 sm:mb-11 xl:mb-[60px] my_input" : "w-full py-3 px-2 bg-gray_input text-base text-black xs:mt-4 xs:mb-6 sm:mt-5 sm:mb-11 xl:mb-[60px] my_input_invalid"}
-                  // className="w-full py-3 px-2 bg-gray_input text-base text-black xs:mt-4 xs:mb-6 sm:mt-5 sm:mb-11 xl:mb-[60px] my_input"
-                  type="text"
-                  placeholder={langData.partners_input_tel}
-                />
-                {/* <input type="text" placeholder={langData.partners_input_tel}/> */}
-                {/*  xs:mt-6 xs:mb-10 sm:m */}
-                <button className="w-full bg-main_color text-white py-3 uppercase" onClick={() => handleBtnClick()}>
-                  {langData.partners_btn}
-                </button>
+              <form onSubmit={handleOnSubmit}>
+                <input name='to_name' 
+                  className='d-none' 
+                  defaultValue='Open Tech' 
+                  type="text" />
+
+                  <input
+                    name="from_name_company"
+                    // ref={companyRef}
+                    className="w-full py-3 px-2 bg-gray_input text-base text-black my_input"
+                    // className={isValidCompany ? "w-full py-3 px-2 bg-gray_input text-base text-black my_input" :"w-full py-3 px-2 bg-gray_input text-base text-black my_input_invalid"}
+                    type="text"
+                    placeholder={langData.partners_input_name}
+                  />
+                  {/* <input
+                    // ref={telRef}
+                    // className={isValidTel ? "w-full py-3 px-2 bg-gray_input text-base text-black xs:mt-4 xs:mb-6 sm:mt-5 sm:mb-11 xl:mb-[60px] my_input" : "w-full py-3 px-2 bg-gray_input text-base text-black xs:mt-4 xs:mb-6 sm:mt-5 sm:mb-11 xl:mb-[60px] my_input_invalid"}
+                    className="w-full py-3 px-2 bg-gray_input text-base text-black xs:mt-4 xs:mb-6 sm:mt-5 sm:mb-11 xl:mb-[60px] my_input"
+                    type="text"
+                    placeholder={langData.partners_input_tel}
+                  /> */}
+                  <Cleave
+                    name='contact_number' 
+                    className='w-full py-3 px-2 bg-gray_input text-base text-black xs:mt-4 xs:mb-6 sm:mt-5 sm:mb-11 xl:mb-[60px] my_input'
+                    placeholder='Enter your credit card number'
+                    options={{
+                      prefix: '+998',
+                      delimiters: [' ', '(', ') ', '-'],
+                      blocks: [4, 0, 2, 3, 2, 2]
+                    }}
+                    onChange={event => setPhoneNumber(`+${event.target.rawValue.substr(1)}`)}
+                  />
+                  {/* <input type="text" placeholder={langData.partners_input_tel}/> */}
+                  {/*  xs:mt-6 xs:mb-10 sm:m */}
+                  <button className="w-full bg-main_color text-white py-3 uppercase" type="submit">
+                    {langData.partners_btn}
+                  </button>
+                </form>
               </div>
             </div>
           </div>
