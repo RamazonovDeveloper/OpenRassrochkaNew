@@ -9,7 +9,10 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "emailjs-com": "^3.2.0",
+    "sweetalert2": "^11.7.3",
+    "cleave.js": "^1.6.0"
   },
   "scripts": {
     "start": "react-scripts start",
