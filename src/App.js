@@ -443,14 +443,14 @@ function App() {
 
         <div className="xxl:container xxl:relative">
           <img
-            className="map_image flex sm:w-11/12 md:w-2/3 lg:w-2/3 xl:w-7/12 md:absolute md:top-8 lg:mt-12 xl:mt-2 xs:mb-4 xxl:mt-14 -z-10"
+            className="map_image flex sm:w-11/12 md:w-2/3 lg:w-2/3 xl:w-[53%] md:absolute md:top-8 lg:mt-12 xl:mt-[-20px] xs:mb-4 xxl:mt-14 -z-10"
             src={karta}
             alt="karta"
           />
         </div>
 
         <div className="container">
-          <div className="bank_card_7_items leading-[18px] xs:text-sm sm:text-base sm:w-5/6 sm:ml-auto md:w-1/2 md:mt-40 lg:mt-4 xl:mt-5">
+          <div className="bank_card_7_items leading-[18px] xs:text-sm sm:text-base sm:w-5/6 sm:ml-auto md:w-1/2 md:mt-40 lg:mt-4 xl:mt-5 font-medium">
             <div className="flex items-start sm:items-center">
               <div className="w-[15px] h-[15px] bg-main_color mr-[10px]"></div>
               <p className="">{langData.contained_regions}</p>
