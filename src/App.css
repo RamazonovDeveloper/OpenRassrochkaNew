@@ -221,6 +221,11 @@
 
 
 @media screen and (min-width:2700px) {
+
+    .hero::after {
+        left: 50%;
+        /* right: 50%; */
+    }
     
     .info::after {
         left: unset;
