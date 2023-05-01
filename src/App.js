@@ -432,7 +432,7 @@ function App() {
         </div> */}
       </div>
 
-      <div className="bank_card_7 relative md:mb-20 lg:mb-[400px] xl:mb-[450px]">
+      <div className="bank_card_7 relative md:mb-20 lg:mb-[400px]">
         <div className="container">
           <SerciseItemTemplate
             itemNum={"07"}
