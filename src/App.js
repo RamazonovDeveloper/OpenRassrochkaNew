@@ -444,7 +444,7 @@ function App() {
         <div className="xxl:container xxl:relative">
           <img
             className="map_image flex sm:w-11/12 md:w-2/3 lg:w-2/3 xl:w-[53%] md:absolute md:top-8 lg:mt-12 xl:mt-[-20px] xs:mb-4 xxl:mt-14 -z-10"
-            src={karta}
+            src={karta} 
             alt="karta"
           />
         </div>
