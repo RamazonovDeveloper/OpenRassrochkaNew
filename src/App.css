@@ -114,9 +114,46 @@
     }
 }
 
+@media screen and (min-width:576px) {
+    .hero__block{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
 @media screen and (min-width:600px) {
     .hero::after {
         left: 10%;
+    }
+
+    .hero__block{
+        padding-left: 42px;
+    }
+}
+
+@media screen and (min-width:630px) {
+    .hero__block{
+        padding-left: 57px;
+    }
+}
+
+
+@media screen and (min-width:660px) {
+    .hero__block{
+        padding-left: 72px;
+    }
+}
+
+@media screen and (min-width:690px) {
+    .hero__block{
+        padding-left: 87px;
+    }
+}
+
+
+@media screen and (min-width:720px) {
+    .hero__block{
+        padding-left: 102px;
     }
 }
 
@@ -147,6 +184,142 @@
 
     .hero::after {
         left: 30%;
+    }
+
+    .hero__block{
+        padding-left: 36px;
+    }
+}
+
+
+@media screen and (min-width:780px) {
+    .hero__block{
+        padding-left: 42px;
+    }
+}
+
+@media screen and (min-width:820px) {
+    .hero__block{
+        padding-left: 62px;
+    }
+}
+
+
+@media screen and (min-width:860px) {
+    .hero__block{
+        padding-left: 82px;
+    }
+}
+
+@media screen and (min-width:900px) {
+    .hero__block{
+        padding-left: 102px;
+    }
+}
+
+@media screen and (min-width:950px) {
+    .hero__block{
+        padding-left: 127px;
+    }
+}
+
+@media screen and (min-width:980px) {
+    .hero__block{
+        padding-left: 142px;
+    }
+}
+
+@media screen and (min-width:992px) {
+    .hero__block{
+        padding-left: 28px;
+    }
+}
+
+@media screen and (min-width:1020px) {
+    .hero__block{
+        padding-left: 42px;
+    }
+}
+
+@media screen and (min-width:1050px) {
+    .hero__block{
+        padding-left: 57px;
+    }
+}
+
+@media screen and (min-width:1100px) {
+    .hero__block{
+        padding-left: 82px;
+    }
+}
+
+@media screen and (min-width:1130px) {
+    .hero__block{
+        padding-left: 97px;
+    }
+}
+
+@media screen and (min-width:1160px) {
+    .hero__block{
+        padding-left: 112px;
+    }
+}
+
+@media screen and (min-width:1185px) {
+    .hero__block{
+        padding-left: 124px;
+    }
+}
+
+
+
+@media screen and (min-width:1200px) {
+    .hero__block{
+        padding-left: 30px;
+    }
+}
+
+@media screen and (min-width:1230px) {
+    .hero__block{
+        padding-left: 45px;
+    }
+}
+
+
+@media screen and (min-width:1260px) {
+    .hero__block{
+        padding-left: 60px;
+    }
+}
+
+
+@media screen and (min-width:1290px) {
+    .hero__block{
+        padding-left: 75px;
+    }
+}
+
+@media screen and (min-width:1330px) {
+    .hero__block{
+        padding-left: 95px;
+    }
+}
+
+@media screen and (min-width:1360px) {
+    .hero__block{
+        padding-left: 110px;
+    }
+}
+
+@media screen and (min-width:1390px) {
+    .hero__block{
+        padding-left: 125px;
+    }
+}
+
+@media screen and (min-width:1440px) {
+    .hero__block{
+        padding-left: 70px;
     }
 }
 
