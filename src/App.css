@@ -1,9 +1,9 @@
 .form_section {
-    background: url('./assets/BG.png');
+    background: url('./assets/form_bg_light.jpg');
 
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top center;
 }
 
 .hero::before {
@@ -61,7 +61,7 @@
 
 
 .footer {
-    background: url('./assets/footBack.png');
+    background: url('./assets/foot_back_light.jpg');
 
     background-size: cover;
     background-repeat: no-repeat;

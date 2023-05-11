@@ -6,6 +6,8 @@ import SerciseItemTemplate from "./components/SerciseItemTemplate";
 import ruFlag from "./assets/Flag.png";
 import uzFlag from "./assets/bayroq.png";
 
+import logo from "./assets/open_rass_logo.png"
+
 import message from "./assets/message.png";
 import phone from "./assets/call.png";
 import karta from "./assets/karta.png";
@@ -59,28 +61,11 @@ function App() {
 
   const [lang, setLang] = useState(identifyLang);
 
-  const companyRef = useRef()
-  const [isValidCompany, setValidCompany] = useState(true)
+  // const companyRef = useRef()
+  // const [isValidCompany, setValidCompany] = useState(true)
 
-  const telRef = useRef()
-  const [isValidTel, setValidTel] 
-  = useState(true)
-
-
-  // const handleBtnClick = () => {
-  //   if(!companyRef.current.value){
-  //     setValidCompany(false)
-  //   }else{
-  //     setValidCompany(true)
-  //   }
-
-  //   if(!telRef.current.value){
-  //     setValidTel(false)
-  //   }else{
-  //     setValidTel(true)
-  //   }
-  // }
-
+  // const telRef = useRef()
+  // const [isValidTel, setValidTel] = useState(true)
 
   const handleLangClick = (name) => {
     localStorage.setItem("lang", name);
@@ -95,7 +80,52 @@ function App() {
     <div className="">
       {/* NAVBAR SECTION START */}
       <div className="container">
-        <div className="flex justify-end gap-x-3.5 mt-11 mb-2">
+        <div className="flex justify-between items-center pt-6 pb-[10px]">
+          <a href="#">
+            <img className="w-[100px]" src={logo} alt="Logo" />
+          </a>
+          <div className="hidden md:flex">
+            <div
+              className={
+                lang === "uz"
+                  ? "opacity-50 flex cursor-pointer"
+                  : "flex cursor-pointer"
+              }
+              onClick={() => handleLangClick("ru")}
+            >
+              <img className="w-7 me-2" src={ruFlag} alt="" />
+              <p className="text-base">Русский</p>
+            </div>
+            <div
+              className={
+                lang === "ru"
+                  ? "opacity-50 flex cursor-pointer ml-[30px]"
+                  : "flex cursor-pointer ml-[30px]"
+              }
+              onClick={() => handleLangClick("uz")}
+            >
+              <img className="w-7 me-2" src={uzFlag} alt="" />
+              <p className="text-base">O'zbek</p>
+            </div>
+          </div>
+
+          <div className="md:hidden flex">
+            <img
+              className={lang != "uz" ? "hidden" : "flex w-6"}
+              onClick={() => setLang("ru")}
+              src={ruFlag}
+              alt="RuFlag"
+            />
+            <img
+              className={lang != "ru" ? "hidden" : "flex w-6"}
+              onClick={() => setLang("uz")}
+              src={uzFlag}
+              alt="UzFlag"
+            />
+          </div>
+
+        </div>
+        {/* <div className="flex justify-end gap-x-3.5 mt-11 mb-2">
           <div
             className={
               lang === "uz"
@@ -118,7 +148,7 @@ function App() {
             <img className="w-7 me-2" src={uzFlag} alt="" />
             <p className="text-base">O'zbek</p>
           </div>
-        </div>
+        </div> */}
       </div>
       {/* NAVBAR SECTION END */}
 
