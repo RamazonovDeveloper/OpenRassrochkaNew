@@ -18,12 +18,11 @@
 }
 
 .hero::after {
-    content: url('./assets/headerGirl.png');
+    content: url('./assets/rassNewHero3.png');
     position: absolute;
     left: -25%;
     z-index: -1;
 }
-
 
 .my_section_name::before {
     position: absolute;
@@ -105,7 +104,7 @@
 
 @media screen and (min-width:414px) {
     .hero::after {
-        left: -10%;
+        left: -30%;
     }
 
     .images::before {
@@ -183,7 +182,7 @@
     }
 
     .hero::after {
-        left: 30%;
+        left: 17%;
     }
 
     .hero__block{
@@ -335,7 +334,7 @@
 
 @media screen and (min-width:1440px) {
     .hero::after {
-        left: 40%;
+        left: 45%;
     }
 
     .my_section_name::before {
