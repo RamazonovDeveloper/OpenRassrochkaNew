@@ -6,6 +6,8 @@ import SerciseItemTemplate from "./components/SerciseItemTemplate";
 import ruFlag from "./assets/Flag.png";
 import uzFlag from "./assets/bayroq.png";
 
+import headerGirlNew from './assets/rassNewHero3.png'
+
 import logo from "./assets/open_rass_logo.png"
 
 import message from "./assets/message.png";
@@ -156,12 +158,17 @@ function App() {
       {/* <div className="xxl:relative w-[100%] max-w-[1200px] "> */}
         <div className="xxl:relative">
           <div className="hero xxl:container overflow-hidden w-full min-h-[700px] flex flex-col justify-between relative xxl:static">
+
             {/* hero TITLE */}
             <div className="container xl:clear-left xxl:px-0">
               <h1 className="hero__title text-black text-uppercase text-[35px] max-w-[202px] py-2 sm:text-[40px] lg:text-[50px] xl:text-[60px] smm:max-w-[300px] md:max-w-[550px] md:mt-[140px]">
                 open
                 <p className="text-main_color"> {langData?.header_title}</p>
               </h1>
+            </div>
+
+            <div className="header_girl_new absolute bottom-[25%] -z-[1]">
+              <img className="header_girl_new_image h-[400px] object-cover" src={headerGirlNew} alt="" />
             </div>
 
             {/* hero BLOCK */}
@@ -175,6 +182,7 @@ function App() {
                 </p>
               </div>
             </div>
+
           </div>
         </div>
       {/* </div> */}
