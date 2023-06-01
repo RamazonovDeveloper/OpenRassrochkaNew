@@ -123,10 +123,6 @@
         left: 10%;
     }
 
-    .header_girl_new_image{
-        /* height: 420px; */
-    }
-
     .images::before {
         width: 80%;
         right: unset;
