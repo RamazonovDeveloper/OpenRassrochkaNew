@@ -1,9 +1,44 @@
 .form_section {
-    background: url('./assets/form_bg_light.jpg');
-
-    background-size: cover;
+    background: url('./assets/formNewBackground.png');
+    background-color: #4E0F8A;
+    background-position: center;
+    background-size: 300%;
+    /* background-size: cover;
     background-repeat: no-repeat;
-    background-position: top center;
+    background-position: top center; */
+}
+
+.my_navbar{
+    /* margin: 0 auto; */
+    background-color: #ECF0F3;
+    position: fixed;
+    z-index: 30;
+    top: 0;
+    left: 0;
+    width: 100vw!important;
+}
+
+.my_navbar_links{
+    height: calc(100vh);
+    z-index: 30;
+    position: fixed;
+    left: 0;
+    top: 70px;
+    width: 80vw;
+    font-weight: 500;
+    background-color: #F4F5F7;
+    transform: translateX(-100%);
+    transition: .5s ease;
+    padding: 20px;
+}
+
+.my_navbar_links-active{
+    transform: translateX(0);
+}
+
+.my_navbar_links ul{ 
+    flex-direction: column;
+    height: calc(100%-90px);
 }
 
 .hero::before {
@@ -14,6 +49,7 @@
     bottom: 60px;
     right: 0;
     background: #ECF0F3;
+    border-radius: 12px 0 0 12px;
     z-index: -2;
 }
 
@@ -71,14 +107,15 @@
 
 
 .footer {
-    background: url('./assets/foot_back_light.jpg');
-
-    background-size: cover;
+    background: url('./assets/formNewBackground.png');
+    background-color: #4E0F8A;
+    background-position: top center;
+    /* background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center; */
 
     /* background-size: contain; */
-    color: #4f0f8a33;
+    /* color: #4f0f8a33; */
 }
 
 .info::before {
@@ -108,7 +145,8 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: #ECF0F3;
+    background: #EDD2C8;
+    border-radius: 0 12px 12px 0;
     z-index: -1;
 }
 
@@ -126,6 +164,10 @@
     .images::before {
         width: 80%;
         right: unset;
+    }
+
+    .form_section{
+        background-size: 200%;
     }
 }
 
@@ -152,6 +194,10 @@
 
     .hero__block{
         padding-left: 42px;
+    }
+    
+    .form_section{
+        background-size: 150%;
     }
 }
 
@@ -267,6 +313,12 @@
     .hero::after {
         left: 30%;
     }
+
+    .form_section{
+        background-size: 100%;
+    }
+
+
 }
 
 @media screen and (min-width:1050px) {

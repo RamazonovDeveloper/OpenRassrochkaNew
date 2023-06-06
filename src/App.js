@@ -6,6 +6,9 @@ import SerciseItemTemplate from "./components/SerciseItemTemplate";
 import ruFlag from "./assets/Flag.png";
 import uzFlag from "./assets/bayroq.png";
 
+import menu from './assets/menu.png'
+import close from './assets/close.png'
+
 import headerGirlNew from './assets/rassNewHero3.png'
 
 import logo from "./assets/open_rass_logo.png"
@@ -76,16 +79,55 @@ function App() {
 
   let langData = data[lang];
 
+  const [navbarIsActive, setNavbarActive] = useState(false)
+
+  function handleClick (value) {
+    setNavbarActive(value)
+  }
+
   // console.log(langData);
 
   return (
     <div className="relative">
       {/* NAVBAR SECTION START */}
-      <div className="container">
-        <div className="flex justify-between items-center pt-6 pb-[10px]">
-          <a href="#">
-            <img className="w-[100px]" src={logo} alt="Logo" />
-          </a>
+      <div className="my_navbar">
+        <div className="container flex justify-between items-center pt-6 pb-[10px]">
+
+          <div className="md:hidden cursor-pointer">
+            {
+              navbarIsActive ?
+              <div>
+                <img onClick={() => handleClick(false)} src={close} alt="" />
+              </div>
+              :
+              <div>
+                <img onClick={() => handleClick(true)} src={menu} alt="" />
+              </div>
+            }
+          </div>
+          <div className="flex">
+            <a href="#">
+              <img className="w-[100px]" src={logo} alt="Logo" />
+            </a>
+
+            <div className="md:flex hidden">
+              <ul className="flex text-uppercase">
+                <li className="lg:ml-[60px] md:ml-[40px]"><a href="#store">{langData.nav_link_1}</a></li>
+                <li className="lg:ml-[60px] md:ml-[40px]"><a href="#bank">{langData.nav_link_2}</a></li>
+              </ul>
+            </div>
+
+            <div className={!navbarIsActive ? "my_navbar_links md:hidden" : "my_navbar_links my_navbar_links-active"}>
+              <ul className="flex text-uppercase">
+                <li className="lg:ml-[60px] mb-3 "><a href="#store">{langData.nav_link_3}</a></li>
+                <li className="lg:ml-[60px] mb-3"><a href="#bank">{langData.nav_link_2}</a></li>
+              </ul>
+            </div>
+
+          </div>
+
+
+          {/* LANGUAGES WITH TEXT */}
           <div className="hidden md:flex">
             <div
               className={
@@ -111,6 +153,8 @@ function App() {
             </div>
           </div>
 
+
+          {/* LANGUAGES WITHOUT TEXT */}
           <div className="md:hidden flex">
             <img
               className={lang != "uz" ? "hidden" : "flex w-6"}
@@ -156,7 +200,7 @@ function App() {
 
       {/* HERO SECTION START */}
       {/* <div className="xxl:relative w-[100%] max-w-[1200px] "> */}
-        <div className="xxl:relative">
+        <div className="xxl:relative mt-[70px]">
           <div className="hero xxl:container overflow-hidden w-full min-h-[700px] flex flex-col justify-between relative xxl:static">
 
             {/* hero TITLE */}
@@ -173,7 +217,7 @@ function App() {
 
             {/* hero BLOCK */}
             <div className="xl:container  xxl:px-0">
-              <div className="hero__block xl:static bg-main_color py-[30px] px-2.5 sm:px-4 md:px-5 xl:px-[70px] lg:py-[45px] lg:px-[60px] max-w-[309px] sm:max-w-[377px] smm:max-w-[400px] md:max-w-[414px] lg:max-w-[574px] xl:max-w-[650px] xl:py-[60px]">
+              <div className="hero__block xl:static rounded-e-xl xl:rounded-xl bg-main_color py-[30px] px-2.5 sm:px-4 md:px-5 xl:px-[70px] lg:py-[45px] lg:px-[60px] max-w-[309px] sm:max-w-[377px] smm:max-w-[400px] md:max-w-[414px] lg:max-w-[574px] xl:max-w-[650px] xl:py-[60px]">
                 <p className="hero__text text-[#E8E8E8] text-base sm:text-xl md:uppercase lg:text-[22px] xl:text-[25px] xs:leading-[21px]  sm:leading-[27px]  lg:leading-[30px] xl:leading-[34px]">
                   {langData?.header_text1}
                 </p>
@@ -190,7 +234,7 @@ function App() {
 
       {/* SERVICE SECTION HEADER */}
       <div className="container mt-[56px] ">
-        <div className="my_section_name relative flex text-main_color font-medium xs:text-sm sm:text-base md:text-sm lg:text-base mb-10">
+        <div  id="store" className="my_section_name relative flex text-main_color font-medium xs:text-sm sm:text-base md:text-sm lg:text-base mb-10">
           <p className="uppercase">{langData.service_name}</p>
         </div>
         <div className="text-base mt-4 font-medium">
@@ -217,218 +261,12 @@ function App() {
       {/* SERVICE SECTION HEADER END */}
 
       {/* SERVICE SECTION ITEMS */}
-      <div className="info overflow-hidden relative">
-        <div className="container">
-          <SerciseItemTemplate
-            itemNum={"01"}
-            itemTitle={langData.service_item1_title}
-          />
-          {/* SERVICE ITEM 1 DIAGRAMM */}
-          <div className="info__body flex justify-between  min-h-[578px] lg:w-[74%]">
-            {/* info ROW */}
-            <div className="info__row w-[48.3%] flex flex-col justify-between">
-              {/* text BLOCK */}
-              <div>
-                {/* MUDDATLI TO'LOVSIZ */}
-                <div className="info__text i-text mb-4">
-                  {/* text BOX */}
-                  <div className="i-text__box md:flex">
-                    <p className="text-gray_table opacity-50 text-sm  sm:text-base xs:text-sm md:mr-3 font-medium">
-                      {langData.diagram_bez_rassrochki_title}
-                    </p>
-                    <p className="text-gray_table text-sm  sm:text-base xs:text-sm uppercase">
-                      {langData.diagram_bez_rassrochki_text}
-                    </p>
-                  </div>
-                </div>
-
-                {/* UMUMIY QUYMAT */}
-                <div className="info__text i-text">
-                  {/* text BOX */}
-                  <div className="i-text__box mb-4 md:flex">
-                    <p className="text-gray_table opacity-50 text-sm md:mr-3 sm:text-base  font-medium">
-                      {langData.diagram_obsh_stoit_title}
-                    </p>
-                    <p className="text-gray_table text-sm  sm:text-base">
-                      {langData.diagram_obsh_stoit1}
-                    </p>
-                  </div>
-                </div>
-
-                <div className="info__text i-text mb-4 md:hidden">
-                  {/* text BOX */}
-                  <div className="i-text__box">
-                    <p className="text-gray_table opacity-50 text-sm  sm:text-base  font-medium">
-                      {langData.diagram_pribl_name}
-                    </p>
-                    <p className="text-gray_table text-sm  sm:text-base">
-                    20%
-                    </p>
-                  </div>
-                </div>
-
-                <div className="info__text i-text mb-4 md:hidden">
-                  {/* text BOX */}
-                  <div className="i-text__box">
-                    <p className="text-gray_table opacity-50 text-sm  sm:text-base  font-medium">
-                      {langData.diagram_pribl_name}
-                    </p>
-                    <p className="text-gray_table text-sm  sm:text-base">
-                    {"22% "+"("+langData.diagram_pribl1_summa+")"}
-                    </p>
-                  </div>
-                </div>
-              </div>
-              {/* table BLOCK */}
-              <div className="flex">
-                {/* DIAGRAM ITEM */}
-                <div className="info__table i-table md:w-2/3 xs:w-full sm:w-full w-full md:mt-auto md:mb-0">
-                  <div className="i-table__head px-2 py-3.5 bg-main_color">
-                    <p className="text-sm sm:text-base   text-white">
-                      {langData.diagram_pribl1}
-                    </p>
-                  </div>
-                  <div className="i-table__body align-middle px-2.5 py-20 bg-main_color_light">
-                    {/* text BOX */}
-                    <div className="i-text__box mb-4">
-                      <p className="text-gray_table opacity-50 text-sm sm:text-base font-medium">
-                        {langData.diagram_sebest}
-                      </p>
-                      <p className="text-gray_table text-sm sm:text-base md:hidden uppercase">
-                        {langData.diagram_sebest_summa1}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* DIAGRAM ITEM TEXT */}
-                <div className="info__table i-table  md:block hidden md:w-1/3">
-                  <div className="i-table__head px-2 py-3.5 border-b-2">
-                    <p className="text-sm sm:text-base   text-black">
-                      {langData.diagram_pribl1_summa}
-                    </p>
-                  </div>
-                  <div className="i-table__body align-middle px-2.5 py-20 ">
-                    {/* text BOX */}
-                    <div className="i-text__box mb-4">
-                      <p className="text-gray_table opacity-50 md:hidden text-sm sm:text-base font-medium">
-                        {langData.diagram_sebest}
-                      </p>
-                      <p className="text-gray_table text-sm sm:text-base">
-                        {langData.diagram_sebest_summa1}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* info ROW */}
-            <div className="info__row w-[48.3%] flex flex-col justify-between">
-              {/* text BLOCK */}
-              <div>
-                <div className="info__text i-text">
-                  {/* text BOX */}
-                  <div className="i-text__box mb-4 md:flex ">
-                    <p className="text-gray_table opacity-50 text-sm sm:text-base  md:mr-3 font-medium">
-                      {langData.diagram_s_rassrochki_title}
-                    </p>
-                    <p className="text-gray_table text-sm sm:text-base uppercase">
-                      {langData.diagram_s_rassrochki_text}
-                    </p>
-                  </div>
-                </div>
-                {/*  md:block xs:hidden */}
-                <div className="info__text i-text">
-                  {/* text BOX */}
-                  <div className="i-text__box mb-4 md:flex">
-                    <p className="text-gray_table opacity-50 text-sm sm:text-base  md:mr-3 font-medium">
-                      {langData.diagram_obsh_stoit_title}
-                    </p>
-                    <p className="text-gray_table text-sm sm:text-base">
-                      {langData.diagram_obsh_stoit2}
-                    </p>
-                  </div>
-                </div>
-
-                <div className="info__text i-text md:hidden">
-                  {/* text BOX */}
-                  <div className="i-text__box mb-4">
-                    <p className="text-gray_table opacity-50 text-sm sm:text-base   font-medium">
-                      {langData.diagram_komissiya}
-                    </p>
-                    <p className="text-gray_table text-sm sm:text-base uppercase">
-                      {langData.diagram_komissiya_summa}
-                    </p>
-                  </div>
-                </div>
-
-                <div className="info__text i-text md:hidden">
-                  {/* text BOX */}
-                  <div className="i-text__box mb-4">
-                    <p className="text-gray_table opacity-50 text-sm sm:text-base   font-medium">
-                      {langData.diagram_pribl_name}
-                    </p>
-                    <p className="text-gray_table text-sm sm:text-base">
-                      {"22% "+"("+langData.diagram_pribl2_summa+")"}
-                    </p>
-                  </div>
-                </div>
-              </div>
-              {/* table BLOCK */}
-              <div className="flex">
-                {/* TABLE DIAGRAMM ITEM */}
-                <div className="info__table i-table md:w-2/3 xs:w-full sm:w-full md:mt-auto md:mb-0">
-                  <div className="i-table__head px-2 py-3.5 bg-main_color">
-                    <p className="text-sm sm:text-base   text-white">
-                      {langData.diagram_pribl2}
-                    </p>
-                  </div>
-                  <div className="i-table__subhead px-2.5 bg-main_color_middle lg:py-3.5">
-                    <p className="text-sm sm:text-base   text-white">
-                      {langData.diagram_komissiya}
-                    </p>
-                  </div>
-                  <div className="i-table__body align-middle px-2.5 py-36 bg-main_color_light">
-                    {/* text BOX */}
-                    <div className="i-text__box mb-4">
-                      <p className="text-gray_table opacity-50 text-sm sm:text-base font-medium">
-                        {langData.diagram_sebest}
-                      </p>
-                      <p className="text-gray_table text-sm sm:text-base md:hidden  uppercase">
-                        {langData.diagram_sebest_summa2}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                {/* TABLE TEXT ITEM */}
-                <div className="info__table i-table md:block hidden md:w-1/3">
-                  <div className="i-table__head px-2 py-3.5">
-                    <p className="text-sm sm:text-base lg:text-base text-black">
-                      {langData.diagram_pribl2_summa}
-                    </p>
-                  </div>
-                  <div className="i-table__subhead px-2.5 py-3.5 border-t-2 border-b-2">
-                    <p className="text-sm sm:text-base lg:text-base text-black">
-                      {langData.diagram_komissiya_summa}{" "}
-                    </p>
-                  </div>
-                  <div className="i-table__body align-middle px-2.5 py-36">
-                    {/* text BOX */}
-                    <div className="i-text__box mb-4">
-                      <p className="text-gray_table text-sm sm:text-base lg:text-base">
-                        {langData.diagram_sebest_summa2}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* SERVICE ITEM 1 DIAGRAMM END*/}
-        </div>
-      </div>
       <div className="container">
+        <SerciseItemTemplate
+          itemNum={"01"}
+          itemTitle={langData.service_item1_title}
+          itemText={langData.service_item1_text}
+        />
         <SerciseItemTemplate
           itemNum={"02"}
           itemTitle={langData.service_item2_title}
@@ -518,7 +356,7 @@ function App() {
       <div className="form_section xs:h-[160px] sm:h-[200px] md:h-[250px] lg:h-[330px]">
         <div className="container ">
           <div className="relative xs:h-[160px] sm:h-[200px] md:h-[250px] lg:h-[330px]">
-            <div className="form_section_card xs:py-[40px] xs:px-[10px] sm:py-12 sm:px-4 md:px-[30px] lg:py-[60px] bg-gray_form absolute top-1/2 md:flex">
+            <div className="form_section_card rounded-xl xs:py-[40px] xs:px-[10px] sm:py-12 sm:px-4 md:px-[30px] lg:py-[60px] bg-gray_form absolute top-1/2 md:flex">
               <div className="md:w-1/2">
                 <h3 className="font-medium text-base uppercase sm:text-[18px] lg:text-[20px]">
                   {langData.partners_header}
@@ -527,17 +365,17 @@ function App() {
                   {langData.partners_text}
                 </p>
               </div>
-              <div className="md:w-1/2">
-              <form onSubmit={handleOnSubmit}>
-                <input name='to_name' 
-                  className='d-none' 
+              <div className="md:w-1/2 ">
+                <form onSubmit={handleOnSubmit}>
+                  <input name='to_name' 
+                  className='d-none  rounded-[3px]'
                   defaultValue='Open Tech' 
                   type="text" />
 
                   <input
                     name="from_name_company"
                     // ref={companyRef}
-                    className="w-full py-3 px-2 bg-gray_input text-base text-black my_input"
+                    className="w-full py-3 px-2 bg-gray_input text-base text-black my_input rounded-[3px]"
                     // className={isValidCompany ? "w-full py-3 px-2 bg-gray_input text-base text-black my_input" :"w-full py-3 px-2 bg-gray_input text-base text-black my_input_invalid"}
                     type="text"
                     placeholder={langData.partners_input_name}
@@ -562,7 +400,7 @@ function App() {
                   />
                   {/* <input type="text" placeholder={langData.partners_input_tel}/> */}
                   {/*  xs:mt-6 xs:mb-10 sm:m */}
-                  <button className="w-full bg-main_color text-white py-3 uppercase" type="submit">
+                  <button className="w-full bg-main_color text-white py-3 rounded-[5px] uppercase" type="submit">
                     {langData.partners_btn}
                   </button>
                 </form>
@@ -576,7 +414,7 @@ function App() {
 
       {/* BANKS SECTION */}
       <div className="container md:mt-[280px] sm:mt-[430px] xs:mt-[410px] ">
-        <div className="my_section_name flex text-main_color font-medium xs:text-sm sm:text-base md:text-sm lg:text-base mb-10 relative">
+        <div id="bank" className="my_section_name flex text-main_color font-medium xs:text-sm sm:text-base md:text-sm lg:text-base mb-10 relative">
           <p className="uppercase">{langData.banks_name}</p>
         </div>
         <div className="text-base mt-4 font-medium">
@@ -679,7 +517,7 @@ function App() {
       {/* FOOTER SECTION */}
       <div className="footer mt-[100px] py-[78px]">
         <div className="container">
-          <div className="bg-gray_light text-black xs:py-8 xs:px-2.5 sm:p-[30px] max-w-sm mx-auto">
+          <div className="bg-gray_light rounded-xl text-black xs:py-8 xs:px-2.5 sm:p-[30px] max-w-sm mx-auto">
             <p className="uppercase font-medium">{langData.decision}</p>
             <div className="flex items-center mt-7 mb-[20px] font-medium">
               <img className="mr-4" src={message} alt="" />
