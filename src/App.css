@@ -9,8 +9,7 @@
 }
 
 .my_navbar{
-    /* margin: 0 auto; */
-    background-color: #ECF0F3;
+    background-color: #F4F5F7;
     position: fixed;
     z-index: 30;
     top: 0;
@@ -30,6 +29,25 @@
     transform: translateX(-100%);
     transition: .5s ease;
     padding: 20px;
+}
+
+.images__right_img1,
+.images__right_img2{
+    position: absolute;
+}
+
+.images__right_img1{
+    z-index: 2;
+    top: 80px;
+    left: -60px;
+    width: 644px;
+}
+
+.images__right_img2{
+    z-index: 1;
+    top: 0;
+    left: -250px;
+    width: 620px;
 }
 
 .my_navbar_links-active{
@@ -236,6 +254,20 @@
         top: -27px;
     }
 
+    .images__right_img1{
+        z-index: 2;
+        top: 80px;
+        left: -60px;
+        width: 644px;
+    }
+
+    .images__right_img2{
+        z-index: 1;
+        top: 0;
+        left: -250px;
+        width: 620px;
+    }
+
     .my_section_name::before {
         display: flex;
     }
@@ -258,7 +290,7 @@
 
     .hero__block{
         padding-left: 36px;
-    }
+    }   
 }
 
 
@@ -402,6 +434,10 @@
     .hero__block{
         padding-left: 70px;
     }
+
+    .form_section{
+        background-position: top center;
+    }
 }
 
 @media screen and (min-width:1024px) {
@@ -532,6 +568,20 @@
     .bank_card_7_items{
         margin-top: 100px;
     }
+
+    .images__right_img1{
+        z-index: 2;
+        top: 80px;
+        left: -30px;
+        width: 644px;
+    }
+
+    .images__right_img2{
+        z-index: 1;
+        top: 0;
+        left: -170px;
+        width: 620px;
+    }
 }
 
 @media screen and (min-width:1100px) {
@@ -551,6 +601,22 @@
 
     .bank_card_7_items{
         margin-top: 80px;
+    }
+}
+
+@media screen and (min-width:1250px) {
+    .images__right_img1{
+        z-index: 2;
+        top: 80px;
+        left: -80px;
+        width: 644px;
+    }
+
+    .images__right_img2{
+        z-index: 1;
+        top: 0;
+        left: -200px;
+        width: 620px;
     }
 }
 

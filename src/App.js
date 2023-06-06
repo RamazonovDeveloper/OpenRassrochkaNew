@@ -22,7 +22,11 @@ import bank2 from "./assets/bankImg2.png";
 import bank3 from './assets/bankImgNew3.png'
 
 import girlOpen from "./assets/girl-open.png";
-import mobiles from "./assets/mobiles.png";
+import mobiles from "./assets/telNew.png";
+import mobile2 from "./assets/telefonNewImg.png"
+
+import singleTel1 from "./assets/singleTel1.png"
+import singleTel2 from "./assets/singleTel2.png"
 
 import { data } from "./data";
 
@@ -219,10 +223,10 @@ function App() {
             {/* hero BLOCK */}
             <div className="xl:container  xxl:px-0">
               <div className="hero__block xl:static rounded-e-xl xl:rounded-xl bg-main_color py-[30px] px-2.5 sm:px-4 md:px-5 xl:px-[70px] lg:py-[45px] lg:px-[60px] max-w-[309px] sm:max-w-[377px] smm:max-w-[400px] md:max-w-[414px] lg:max-w-[574px] xl:max-w-[650px] xl:py-[60px]">
-                <p className="hero__text text-[#E8E8E8] text-base sm:text-xl md:uppercase lg:text-[22px] xl:text-[25px] xs:leading-[21px]  sm:leading-[27px]  lg:leading-[30px] xl:leading-[34px]">
+                <p className="hero__text text-[#E8E8E8] text-base sm:text-xl lg:text-[22px] xl:text-[25px] xs:leading-[21px]  sm:leading-[27px]  lg:leading-[30px] xl:leading-[34px]">
                   {langData?.header_text1}
                 </p>
-                <p className="hero__text text-[#E8E8E8] text-base sm:text-xl md:uppercase lg:text-[22px] xl:text-[25px] leading-[21px] sm:leading-[27px]  lg:leading-[30px] xl:leading-[34px]">
+                <p className="hero__text text-[#E8E8E8] text-base sm:text-xl lg:text-[22px] xl:text-[25px] leading-[21px] sm:leading-[27px]  lg:leading-[30px] xl:leading-[34px]">
                   {langData?.header_text2}
                 </p>
               </div>
@@ -241,13 +245,13 @@ function App() {
         <div className="text-base mt-4 font-medium">
           {/* <p className='uppercase text-[25px] text-main_color leading-7 font-light'>Open <span className='text-black'>muddatli kartasi</span> - Bu biznesingiz o’sishi va rivojlanishi</p> */}
           {lang === "uz" ? (
-            <p className="sm:w-11/12 md:w-9/12 lg:w-8/12 sm:ml-auto sm:mr-0 uppercase xs:text-[25px] sm:text-[27px] md:text-[40px] lg:text-[50px] xl:text-[60px] text-main_color xs:leading-7 sm:leading-8 md:leading-[46px] lg:leading-[58px] xl:leading-[70px] font-light">
-              Open <span className="text-black">muddatli kartasi</span> - Bu
+            <p className="sm:w-11/12 md:w-9/12 lg:w-8/12 sm:ml-auto sm:mr-0 xs:text-[25px] sm:text-[27px] md:text-[40px] lg:text-[50px] xl:text-[60px] text-main_color xs:leading-7 sm:leading-8 md:leading-[46px] lg:leading-[58px] xl:leading-[70px] font-light">
+              OPEN <span className="text-black">muddatli kartasi</span> - Bu
               biznesingiz o’sishi va rivojlanishi
             </p>
           ) : (
-            <p className="sm:w-11/12 md:w-9/12 lg:w-8/12 sm:ml-auto sm:mr-0 uppercase xs:text-[25px] sm:text-[27px] md:text-[40px] lg:text-[50px] xl:text-[60px] text-main_color xs:leading-7 sm:leading-8 md:leading-[46px] lg:leading-[58px] xl:leading-[70px] font-light">
-              <span className="text-black">Карта рассрочки</span> open{" "}
+            <p className="sm:w-11/12 md:w-9/12 lg:w-8/12 sm:ml-auto sm:mr-0 xs:text-[25px] sm:text-[27px] md:text-[40px] lg:text-[50px] xl:text-[60px] text-main_color xs:leading-7 sm:leading-8 md:leading-[46px] lg:leading-[58px] xl:leading-[70px] font-light">
+              <span className="text-black">Карта рассрочки</span> OPEN{" "}
               <span className="text-black">- это</span> рост{" "}
               <span className="text-black">и</span> развитие{" "}
               <span className="text-black">вашего</span> бизнеса
@@ -262,7 +266,7 @@ function App() {
       {/* SERVICE SECTION HEADER END */}
 
       {/* SERVICE SECTION ITEMS */}
-      <div className="container">
+      <div className="container mt-[90px]">
         <SerciseItemTemplate
           itemNum={"01"}
           itemTitle={langData.service_item1_title}
@@ -287,8 +291,10 @@ function App() {
         <div className="images__left hidden w-1/2 md:flex md:justify-end md:items-end lg:pr-28">
           <img src={girlOpen} alt="girl with open bag" className="h-full" />
         </div>
-        <div className="images__right w-4/5 ml-auto mr-2 md:w-[48%] flex items-end">
-          <img src={mobiles} alt="mobiles with open logo" className="h-full" />
+        <div className="images__right w-4/5 ml-auto mr-2 md:w-[48%] flex items-end ">
+          <img src={mobiles} className="h-full" alt="" />
+          {/* <img className="images__right_img1" src={singleTel1} alt="mobiles with open logo" />
+          <img className="images__right_img2" src={singleTel2} alt="mobiles with open logo" /> */}
         </div>
       </div>
       <div className="container">
@@ -354,7 +360,7 @@ function App() {
       </div>
 
       {/* FORM SECTION */}
-      <div className="form_section xs:h-[160px] sm:h-[200px] md:h-[250px] lg:h-[330px]">
+      <div className="form_section xs:h-[160px] sm:h-[200px] md:h-[250px] lg:h-[330px] xl:h-[438px]">
         <div className="container ">
           <div className="relative xs:h-[160px] sm:h-[200px] md:h-[250px] lg:h-[330px]">
             <div className="form_section_card rounded-xl xs:py-[40px] xs:px-[10px] sm:py-12 sm:px-4 md:px-[30px] lg:py-[60px] bg-gray_form absolute top-1/2 md:flex">
@@ -369,12 +375,14 @@ function App() {
               <div className="md:w-1/2 ">
                 <form onSubmit={handleOnSubmit}>
                   <input name='to_name' 
+                  required
                   className='d-none  rounded-[3px]'
                   defaultValue='Open Tech' 
                   type="text" />
 
                   <input
                     name="from_name_company"
+                    required
                     // ref={companyRef}
                     className="w-full py-3 px-2 bg-gray_input text-base text-black my_input rounded-[3px]"
                     // className={isValidCompany ? "w-full py-3 px-2 bg-gray_input text-base text-black my_input" :"w-full py-3 px-2 bg-gray_input text-base text-black my_input_invalid"}
@@ -421,13 +429,13 @@ function App() {
         <div className="text-base mt-4 font-medium">
           {/* <p className='uppercase text-[25px] text-main_color leading-7 font-light'>Open <span className='text-black'>muddatli kartasi</span> - Bu biznesingiz o’sishi va rivojlanishi</p> */}
           {lang === "uz" ? (
-            <p className="sm:w-11/12 md:w-9/12 lg:w-8/12 sm:ml-auto sm:mr-0 uppercase xs:text-[25px] sm:text-[27px] md:text-[40px] lg:text-[50px] xl:text-[60px] text-main_color xs:leading-7 sm:leading-8 md:leading-[46px] lg:leading-[58px] xl:leading-[70px] font-light">
+            <p className="sm:w-11/12 md:w-9/12 lg:w-8/12 sm:ml-auto sm:mr-0 xs:text-[25px] sm:text-[27px] md:text-[40px] lg:text-[50px] xl:text-[60px] text-main_color xs:leading-7 sm:leading-8 md:leading-[46px] lg:leading-[58px] xl:leading-[70px] font-light">
               <span className="text-black">Biz karta </span> biznesini
               rivojlantirish <span className="text-black">uchun yangi</span>{" "}
               imkoniyatlar <span className="text-black">taqdim etamiz</span>
             </p>
           ) : (
-            <p className="sm:w-11/12 md:w-9/12 lg:w-8/12 sm:ml-auto sm:mr-0 uppercase xs:text-[25px] sm:text-[27px] md:text-[40px] lg:text-[50px] xl:text-[60px] text-main_color xs:leading-7 sm:leading-8 md:leading-[46px] lg:leading-[58px] xl:leading-[70px] font-light">
+            <p className="sm:w-11/12 md:w-9/12 lg:w-8/12 sm:ml-auto sm:mr-0 xs:text-[25px] sm:text-[27px] md:text-[40px] lg:text-[50px] xl:text-[60px] text-main_color xs:leading-7 sm:leading-8 md:leading-[46px] lg:leading-[58px] xl:leading-[70px] font-light">
               <span className="text-black">Новые</span> возможности{" "}
               <span className="text-black">для</span> развития{" "}
               <span className="text-black">карточного</span> бизнеса{" "}
