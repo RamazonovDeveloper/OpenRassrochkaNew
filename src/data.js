@@ -1,5 +1,9 @@
 export const data = {
     uz:{
+        nav_link_1:"korxonalari uchun",
+        nav_link_2:"Banklarga",
+        nav_link_3:"Savdo va xizmat ko'rsatish korxonalari uchun",
+
         header_title:"Muddatli to'lov",
         header_text1:"To'lov xizmatlari, karta va kredit mahsulotlari sohasidagi innovatsion yechimlar.",
         header_text2:"Sodiq mijozlar, maqsadli trafik va qo'shimcha mahsulot aylanmasiga ega bo'ling",
@@ -25,8 +29,8 @@ export const data = {
         diagram_sebest_summa1:"4 mln SO’M",
         diagram_sebest_summa2:"7 mln SO’M",
 
-
         service_item1_title:"O'rtacha chekning va foydangizning o’sishi",
+        service_item1_text:"Mijoz oʻziga yanada qimmatroq mahsulotlarni ravo koʻrishi mumkin, chunki muddatli toʻlov asosida xaridni amalga oshirayotib u xaridning umumiy narxiga emas, balki oylik toʻlov miqdoriga eʼtibor qaratad",
         service_item2_title:"Yangi mijozlar va xaridlar sonining oshishi",
         service_item3_title:"Xavfning yo’qligi",
         service_item3_text:"Siz faqat Open kartasi orqali amalga oshirilgan xaridlar uchun komissiya to'laysiz. Biz barcha o'zaro hisob-kitoblarni o'zimiz tashkil qilamiz va soliq masalalari bo'yicha mutaxassislaringizga maslahat beramiz",
@@ -70,6 +74,10 @@ export const data = {
     },
 
     ru:{
+        nav_link_1:"предприятиям",
+        nav_link_2:"Банкам",
+        nav_link_3:"Торговым и сервисным предприятиям",
+
         header_title:"Рассрочка",
         header_text1:"Инновационные решения в сфере платежных сервисов, карточных и кредитных продуктов.",
         header_text2:"Получайте лояльных клиентов, целевой трафик и дополнительный товарооборот.",
@@ -96,6 +104,7 @@ export const data = {
         diagram_sebest_summa2:"7 млн UZS",
 
         service_item1_title:"Рост среднего чека и вашей прибыли",
+        service_item1_text:"Клиент может позволить себе более дорогие товары, так как при  покупке в рассрочку  он  больше ориентируется не на общую стоимость покупки, а на размер ежемесячного платежа.",
         service_item2_title:"новые клиенты и рост частоты покупок ",
         service_item3_title:"Отсутствие рисков",
         service_item3_text:"Вы платите комиссию только от фактических покупок по карте Open. Мы сами организуем все взаиморасчеты и проконсультируем ваших специалистов по вопросам налогообложения",
@@ -117,7 +126,7 @@ export const data = {
         partners_text:"Заполните эту форму, и мы проведем для вас презентацию рассрочки и поможем заключить договор ",
         partners_input_name:"Название организации",
         partners_input_tel:"Телефон",
-        partners_btn:"Hamkorga aylanish",
+        partners_btn:"Стать партнером",
 
         banks_name:"Банкам",
         banks_text:"Запустить кобрендинговую карту рассрочки на базе нашей партнерской сети и технологий OpenInstallment можно всего за несколько недель. Даже если у вас уже есть собственная рассрочка или маркетплейс, вы сможете улучшить свой сервис и конкурентную позицию за счет OpenInstallment.",

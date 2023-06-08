@@ -6,6 +6,9 @@ import SerciseItemTemplate from "./components/SerciseItemTemplate";
 import ruFlag from "./assets/Flag.png";
 import uzFlag from "./assets/bayroq.png";
 
+import menu from './assets/menu.png'
+import close from './assets/close.png'
+
 import headerGirlNew from './assets/rassNewHero3.png'
 import headerGirlNew2 from './assets/rassNewHero5.png' 
 import headerGirlNew3 from './assets/rassNewHero6.png' 
@@ -19,10 +22,14 @@ import karta from "./assets/karta.png";
 
 import bank1 from "./assets/bankImg1.png";
 import bank2 from "./assets/bankImg2.png";
-import bank3 from "./assets/bankImgNew3.png"
+import bank3 from './assets/bankImgNew3.png'
 
 import girlOpen from "./assets/girl-open.png";
-import mobiles from "./assets/mobiles.png";
+import mobiles from "./assets/telNew.png";
+import mobile2 from "./assets/telefonNewImg.png"
+
+import singleTel1 from "./assets/singleTel1.png"
+import singleTel2 from "./assets/singleTel2.png"
 
 import { data } from "./data";
 
@@ -80,16 +87,55 @@ function App() {
 
   let langData = data[lang];
 
+  const [navbarIsActive, setNavbarActive] = useState(false)
+
+  function handleClick (value) {
+    setNavbarActive(value)
+  }
+
   // console.log(langData);
 
   return (
     <div className="relative">
       {/* NAVBAR SECTION START */}
-      <div className="container">
-        <div className="flex justify-between items-center pt-6 pb-[10px]">
-          <a href="#">
-            <img className="w-[100px]" src={logo} alt="Logo" />
-          </a>
+      <div className="my_navbar">
+        <div className="container flex justify-between items-center pt-6 pb-[10px]">
+
+          <div className="md:hidden cursor-pointer">
+            {
+              navbarIsActive ?
+              <div>
+                <img onClick={() => handleClick(false)} src={close} alt="" />
+              </div>
+              :
+              <div>
+                <img onClick={() => handleClick(true)} src={menu} alt="" />
+              </div>
+            }
+          </div>
+          <div className="flex">
+            <a href="#">
+              <img className="w-[100px]" src={logo} alt="Logo" />
+            </a>
+
+            <div className="md:flex hidden">
+              <ul className="flex text-uppercase items-center">
+                <li className="lg:ml-[60px] md:ml-[40px]"><a href="#store">{langData.nav_link_1}</a></li>
+                <li className="lg:ml-[60px] md:ml-[40px]"><a href="#bank">{langData.nav_link_2}</a></li>
+              </ul>
+            </div>
+
+            <div className={!navbarIsActive ? "my_navbar_links md:hidden" : "my_navbar_links my_navbar_links-active"}>
+              <ul className="flex text-uppercase">
+                <li className="lg:ml-[60px] mb-3 "><a href="#store">{langData.nav_link_3}</a></li>
+                <li className="lg:ml-[60px] mb-3"><a href="#bank">{langData.nav_link_2}</a></li>
+              </ul>
+            </div>
+
+          </div>
+
+
+          {/* LANGUAGES WITH TEXT */}
           <div className="hidden md:flex">
             <div
               className={
@@ -115,6 +161,8 @@ function App() {
             </div>
           </div>
 
+
+          {/* LANGUAGES WITHOUT TEXT */}
           <div className="md:hidden flex">
             <img
               className={lang != "uz" ? "hidden" : "flex w-6"}
@@ -160,7 +208,7 @@ function App() {
 
       {/* HERO SECTION START */}
       {/* <div className="xxl:relative w-[100%] max-w-[1200px] "> */}
-        <div className="xxl:relative">
+        <div className="xxl:relative mt-[70px]">
           <div className="hero xxl:container overflow-hidden w-full min-h-[700px] flex flex-col justify-between relative xxl:static">
 
             {/* hero TITLE */}
@@ -178,11 +226,11 @@ function App() {
 
             {/* hero BLOCK */}
             <div className="xl:container  xxl:px-0">
-              <div className="hero__block xl:static bg-main_color py-[30px] px-2.5 sm:px-4 md:px-5 xl:px-[70px] lg:py-[45px] lg:px-[60px] max-w-[309px] sm:max-w-[377px] smm:max-w-[400px] md:max-w-[414px] lg:max-w-[574px] xl:max-w-[650px] xl:py-[60px]">
-                <p className="hero__text text-[#E8E8E8] text-base sm:text-xl md:uppercase lg:text-[22px] xl:text-[25px] xs:leading-[21px]  sm:leading-[27px]  lg:leading-[30px] xl:leading-[34px]">
+              <div className="hero__block xl:static rounded-e-xl xl:rounded-xl bg-main_color py-[30px] px-2.5 sm:px-4 md:px-5 xl:px-[70px] lg:py-[45px] lg:px-[60px] max-w-[309px] sm:max-w-[377px] smm:max-w-[400px] md:max-w-[414px] lg:max-w-[574px] xl:max-w-[650px] xl:py-[60px]">
+                <p className="hero__text text-[#E8E8E8] text-base sm:text-xl lg:text-[22px] xl:text-[25px] xs:leading-[21px]  sm:leading-[27px]  lg:leading-[30px] xl:leading-[34px]">
                   {langData?.header_text1}
                 </p>
-                <p className="hero__text text-[#E8E8E8] text-base sm:text-xl md:uppercase lg:text-[22px] xl:text-[25px] leading-[21px] sm:leading-[27px]  lg:leading-[30px] xl:leading-[34px]">
+                <p className="hero__text text-[#E8E8E8] text-base sm:text-xl lg:text-[22px] xl:text-[25px] leading-[21px] sm:leading-[27px]  lg:leading-[30px] xl:leading-[34px]">
                   {langData?.header_text2}
                 </p>
               </div>
@@ -195,19 +243,19 @@ function App() {
 
       {/* SERVICE SECTION HEADER */}
       <div className="container mt-[56px] ">
-        <div className="my_section_name relative flex text-main_color font-medium xs:text-sm sm:text-base md:text-sm lg:text-base mb-10">
+        <div  id="store" className="my_section_name relative flex text-main_color font-medium xs:text-sm sm:text-base md:text-sm lg:text-base mb-10">
           <p className="uppercase">{langData.service_name}</p>
         </div>
         <div className="text-base mt-4 font-medium">
           {/* <p className='uppercase text-[25px] text-main_color leading-7 font-light'>Open <span className='text-black'>muddatli kartasi</span> - Bu biznesingiz o’sishi va rivojlanishi</p> */}
           {lang === "uz" ? (
-            <p className="sm:w-11/12 md:w-9/12 lg:w-8/12 sm:ml-auto sm:mr-0 uppercase xs:text-[25px] sm:text-[27px] md:text-[40px] lg:text-[50px] xl:text-[60px] text-main_color xs:leading-7 sm:leading-8 md:leading-[46px] lg:leading-[58px] xl:leading-[70px] font-light">
-              Open <span className="text-black">muddatli kartasi</span> - Bu
+            <p className="sm:w-11/12 md:w-9/12 lg:w-8/12 sm:ml-auto sm:mr-0 xs:text-[25px] sm:text-[27px] md:text-[40px] lg:text-[50px] xl:text-[60px] text-main_color xs:leading-7 sm:leading-8 md:leading-[46px] lg:leading-[58px] xl:leading-[70px] font-light">
+              OPEN <span className="text-black">muddatli kartasi</span> - Bu
               biznesingiz o’sishi va rivojlanishi
             </p>
           ) : (
-            <p className="sm:w-11/12 md:w-9/12 lg:w-8/12 sm:ml-auto sm:mr-0 uppercase xs:text-[25px] sm:text-[27px] md:text-[40px] lg:text-[50px] xl:text-[60px] text-main_color xs:leading-7 sm:leading-8 md:leading-[46px] lg:leading-[58px] xl:leading-[70px] font-light">
-              <span className="text-black">Карта рассрочки</span> open{" "}
+            <p className="sm:w-11/12 md:w-9/12 lg:w-8/12 sm:ml-auto sm:mr-0 xs:text-[25px] sm:text-[27px] md:text-[40px] lg:text-[50px] xl:text-[60px] text-main_color xs:leading-7 sm:leading-8 md:leading-[46px] lg:leading-[58px] xl:leading-[70px] font-light">
+              <span className="text-black">Карта рассрочки</span> OPEN{" "}
               <span className="text-black">- это</span> рост{" "}
               <span className="text-black">и</span> развитие{" "}
               <span className="text-black">вашего</span> бизнеса
@@ -233,6 +281,14 @@ function App() {
         </div>
       </div>
       <div className="container">
+{/* =======
+      <div className="container mt-[90px]">
+        <SerciseItemTemplate
+          itemNum={"01"}
+          itemTitle={langData.service_item1_title}
+          itemText={langData.service_item1_text}
+        />
+>>>>>>> 370306878debdb3bab0a07d5e2b052845738d063 */}
         <SerciseItemTemplate
           itemNum={"02"}
           itemTitle={langData.service_item2_title}
@@ -252,8 +308,10 @@ function App() {
         <div className="images__left hidden w-1/2 md:flex md:justify-end md:items-end lg:pr-28">
           <img src={girlOpen} alt="girl with open bag" className="h-full" />
         </div>
-        <div className="images__right w-4/5 ml-auto mr-2 md:w-[48%] flex items-end">
-          <img src={mobiles} alt="mobiles with open logo" className="h-full" />
+        <div className="images__right w-4/5 ml-auto mr-2 md:w-[48%] flex items-end ">
+          <img src={mobiles} className="h-full" alt="" />
+          {/* <img className="images__right_img1" src={singleTel1} alt="mobiles with open logo" />
+          <img className="images__right_img2" src={singleTel2} alt="mobiles with open logo" /> */}
         </div>
       </div>
       <div className="container">
@@ -319,10 +377,10 @@ function App() {
       </div>
 
       {/* FORM SECTION */}
-      <div className="form_section xs:h-[160px] sm:h-[200px] md:h-[250px] lg:h-[330px]">
+      <div className="form_section xs:h-[160px] sm:h-[200px] md:h-[250px] lg:h-[330px] xl:h-[438px]">
         <div className="container ">
           <div className="relative xs:h-[160px] sm:h-[200px] md:h-[250px] lg:h-[330px]">
-            <div className="form_section_card xs:py-[40px] xs:px-[10px] sm:py-12 sm:px-4 md:px-[30px] lg:py-[60px] bg-gray_form absolute top-1/2 md:flex">
+            <div className="form_section_card rounded-xl xs:py-[40px] xs:px-[10px] sm:py-12 sm:px-4 md:px-[30px] lg:py-[60px] bg-gray_form absolute top-1/2 md:flex">
               <div className="md:w-1/2">
                 <h3 className="font-medium text-base uppercase sm:text-[18px] lg:text-[20px]">
                   {langData.partners_header}
@@ -331,17 +389,19 @@ function App() {
                   {langData.partners_text}
                 </p>
               </div>
-              <div className="md:w-1/2">
-              <form onSubmit={handleOnSubmit}>
-                <input name='to_name' 
-                  className='d-none' 
+              <div className="md:w-1/2 ">
+                <form onSubmit={handleOnSubmit}>
+                  <input name='to_name' 
+                  required
+                  className='d-none  rounded-[3px]'
                   defaultValue='Open Tech' 
                   type="text" />
 
                   <input
                     name="from_name_company"
+                    required
                     // ref={companyRef}
-                    className="w-full py-3 px-2 bg-gray_input text-base text-black my_input"
+                    className="w-full py-3 px-2 bg-gray_input text-base text-black my_input rounded-[3px]"
                     // className={isValidCompany ? "w-full py-3 px-2 bg-gray_input text-base text-black my_input" :"w-full py-3 px-2 bg-gray_input text-base text-black my_input_invalid"}
                     type="text"
                     placeholder={langData.partners_input_name}
@@ -366,7 +426,7 @@ function App() {
                   />
                   {/* <input type="text" placeholder={langData.partners_input_tel}/> */}
                   {/*  xs:mt-6 xs:mb-10 sm:m */}
-                  <button className="w-full bg-main_color text-white py-3 uppercase" type="submit">
+                  <button className="w-full bg-main_color text-white py-3 rounded-[5px] uppercase" type="submit">
                     {langData.partners_btn}
                   </button>
                 </form>
@@ -380,19 +440,19 @@ function App() {
 
       {/* BANKS SECTION */}
       <div className="container md:mt-[280px] sm:mt-[430px] xs:mt-[410px] ">
-        <div className="my_section_name flex text-main_color font-medium xs:text-sm sm:text-base md:text-sm lg:text-base mb-10 relative">
+        <div id="bank" className="my_section_name flex text-main_color font-medium xs:text-sm sm:text-base md:text-sm lg:text-base mb-10 relative">
           <p className="uppercase">{langData.banks_name}</p>
         </div>
         <div className="text-base mt-4 font-medium">
           {/* <p className='uppercase text-[25px] text-main_color leading-7 font-light'>Open <span className='text-black'>muddatli kartasi</span> - Bu biznesingiz o’sishi va rivojlanishi</p> */}
           {lang === "uz" ? (
-            <p className="sm:w-11/12 md:w-9/12 lg:w-8/12 sm:ml-auto sm:mr-0 uppercase xs:text-[25px] sm:text-[27px] md:text-[40px] lg:text-[50px] xl:text-[60px] text-main_color xs:leading-7 sm:leading-8 md:leading-[46px] lg:leading-[58px] xl:leading-[70px] font-light">
+            <p className="sm:w-11/12 md:w-9/12 lg:w-8/12 sm:ml-auto sm:mr-0 xs:text-[25px] sm:text-[27px] md:text-[40px] lg:text-[50px] xl:text-[60px] text-main_color xs:leading-7 sm:leading-8 md:leading-[46px] lg:leading-[58px] xl:leading-[70px] font-light">
               <span className="text-black">Biz karta </span> biznesini
               rivojlantirish <span className="text-black">uchun yangi</span>{" "}
               imkoniyatlar <span className="text-black">taqdim etamiz</span>
             </p>
           ) : (
-            <p className="sm:w-11/12 md:w-9/12 lg:w-8/12 sm:ml-auto sm:mr-0 uppercase xs:text-[25px] sm:text-[27px] md:text-[40px] lg:text-[50px] xl:text-[60px] text-main_color xs:leading-7 sm:leading-8 md:leading-[46px] lg:leading-[58px] xl:leading-[70px] font-light">
+            <p className="sm:w-11/12 md:w-9/12 lg:w-8/12 sm:ml-auto sm:mr-0 xs:text-[25px] sm:text-[27px] md:text-[40px] lg:text-[50px] xl:text-[60px] text-main_color xs:leading-7 sm:leading-8 md:leading-[46px] lg:leading-[58px] xl:leading-[70px] font-light">
               <span className="text-black">Новые</span> возможности{" "}
               <span className="text-black">для</span> развития{" "}
               <span className="text-black">карточного</span> бизнеса{" "}
@@ -410,7 +470,8 @@ function App() {
         {/* BANK CARD 1 */}
         {/* sm:mr-0 sm:w-11/12 md:w-9/12 lg:w-8/12 */}
         <div className="md:flex md:align-bottom md:flex-row-reverse justify-between items-end">
-          <div className="xs:w-[96%] md:w-1/2 xs:ml-auto bg-[#F0CEAF] xs:py-[74px] xs:px-2.5 sm:px-5 md:px-[30px] md:py-[90px] text-black rounded-s-xl text-base relative sm:mr-0 sm:w-11/12 ">
+          {/* <div className="xs:w-[96%] md:w-1/2 xs:ml-auto bg-[#F0CEAF] xs:py-[74px] xs:px-2.5 sm:px-5 md:px-[30px] md:py-[90px] text-black rounded-s-xl text-base relative sm:mr-0 sm:w-11/12 "> */}
+          <div className="xs:w-[96%] md:w-1/2 xs:ml-auto bg-[#F0CEAF] xl:rounded-xl rounded-s-xl xs:py-[74px] xs:px-2.5 sm:px-5 md:px-[30px] md:py-[90px] text-black text-base relative sm:mr-0 sm:w-11/12 ">
             <p className="bank_sections_p_font absolute xs:top-5 xs:left-2.5 sm:left-4 md:left-5 lg:left-[30px] lg:top-[35px] ">
               01
             </p>
@@ -426,7 +487,8 @@ function App() {
 
         <div className="md:flex ">
           {/* BANK CARD 2 */}
-          <div className="xs:py-[54px] md:w-1/2 lg:w-[40%] xs:px-2.5 sm:px-5 md:px-[30px] md:py-[71px] lg:py-[100px] xs:text-black text-base relative md:bg-[#ECB0B7] md:text-black md:rounded-e-xl sm:w-11/12">
+          <div className="xs:py-[54px] md:w-1/2 lg:w-[40%] xs:px-2.5 sm:px-5 md:px-[30px] md:py-[71px] lg:py-[100px] xs:text-black text-base relative md:bg-[#ECB0B7] xl:rounded-xl rounded-e-xl sm:w-11/12">
+{/* >>>>>>> 370306878debdb3bab0a07d5e2b052845738d063 */}
             <p className="bank_sections_p_font absolute xs:top-5 xs:left-2.5 sm:left-4 md:left-5 lg:left-[30px] lg:top-[35px]">02</p>
             <h1 className="uppercase leading-[20px] mb-4 ">
               {langData.banks_item2_title}
@@ -435,7 +497,11 @@ function App() {
           </div>
 
           {/* BANK CARD 3 */}
+{/* <<<<<<< HEAD
           <div className="w-[96%] md:w-1/2 xs:ml-auto xs:mr-0 lg:w-[40%] xs:bg-[#ECB0B7] xs:py-[74px] xs:px-2.5 md:px-[30px] md:py-[71px] lg:py-[100px] xs:text-black rounded-s-xl text-base relative sm:w-11/12 md:bg-[#00000000] md:text-black">
+======= */}
+          <div className="w-[96%] md:w-1/2 lg:w-[40%] xs:bg-[#ECB0B7] rounded-e-xl xs:py-[74px] xs:px-2.5 md:px-[30px] md:py-[71px] lg:py-[100px] xs:text-black text-base relative sm:w-11/12 md:bg-transparent md:text-black">
+{/* >>>>>>> 370306878debdb3bab0a07d5e2b052845738d063 */}
             <p className="bank_sections_p_font md:text-main_color absolute xs:top-5 xs:left-2.5 sm:left-4 md:left-5 lg:left-[30px] lg:top-[35px]">03</p>
             <h1 className="uppercase leading-[20px] mb-4">
               {langData.banks_item3_title}
@@ -453,15 +519,26 @@ function App() {
             </h1>
             <p>{langData.banks_item4_text}</p>
           </div>
+{/* <<<<<<< HEAD
           <div className="md:w-1/2 max-h-[300px] w-full lg:max-h-[800px] min-h-[250px] flex justify-end items-end z-10">
             <img className="-z-10 absolute -right-[50px] bottom-0 md:hidden sm:static" src={bank3} alt="" />
             <img className="my_crazy_card lg:absolute lg:right-0 lg:bottom-0 hidden md:flex" src={bank2} alt="" />
+======= */}
+          <div className="md:w-1/2 max-h-[300px] lg:max-h-[800px] flex justify-end items-end z-10 ">
+            {/*  md:w-1/2 */}
+            <img className="lg:-z-10 lg:absolute lg:right-0 lg:bottom-0 hidden md:flex" src={bank2} alt="" />
+            <img className="lg:-z-10 lg:absolute lg:right-0 lg:bottom-0 md:hidden" src={bank3} alt="" />
+{/* >>>>>>> 370306878debdb3bab0a07d5e2b052845738d063 */}
           </div>
         </div>
 
         <div className="md:flex justify-between">
           {/* BANK CARD 5 */}
+{/* <<<<<<< HEAD
           <div className="w-[96%] xs:ml-auto sm:mr-auto sm:ml-0 xs:bg-[#DCCFE8] md:bg-transparent xs:pt-[50px] xs:pb-[30px] sm:px-5 md:px-[30px] md:py-[71px] lg:py-[100px] xs:px-2.5 rounded-s-xl sm:rounded-e-xl sm:rounded-s-none xs:text-black md:text-black text-base relative sm:w-11/12">
+======= */}
+          <div className="w-[96%] xs:ml-auto sm:mr-auto sm:ml-0 xs:bg-[#DCCFE8] sm:rounded-e-xl sm:rounded-s-none rounded-s-xl  md:bg-transparent xs:pt-[50px] xs:pb-[30px] sm:px-5 md:px-[30px] md:py-[71px] lg:py-[100px] xs:px-2.5 xs:text-black md:text-black text-base relative sm:w-11/12">
+{/* >>>>>>> 370306878debdb3bab0a07d5e2b052845738d063 */}
             <p className="bank_sections_p_font md:text-main_color absolute xs:top-5 xs:left-2.5 md:left-5 xl:left-[30px] xl:top-[35px]">05</p>
             <h1 className="uppercase leading-[20px] mb-4">
               {langData.banks_item5_title}
@@ -470,10 +547,10 @@ function App() {
           </div>
 
           {/* BANK CARD 6 */}
-          <div className="xs:pt-[50px] xs:pb-[30px] xs:px-2.5 sm:px-5 md:px-[30px] md:py-[71px] lg:py-[100px] md:bg-[#DCCFE8] xs:text-black md:text-black rounded-s-xl text-base relative sm:ml-auto sm:w-11/12">
-            {/* <p className="bank_sections_p_font ">06</p> */}
-            <p className="bank_sections_p_font absolute xs:top-5 xs:left-2.5 sm:left-5 md:left-5 xl:left-[30px] xl:top-[35px]">06</p>
-            {/* <p className="bank_sections_p_font absolute xs:top-5 xs:left-2.5 md:left-5 xl:left-[30px] xl:top-[35px]">06</p> */}
+          {/* <div className="xs:pt-[50px] xs:pb-[30px] xs:px-2.5 sm:px-5 md:px-[30px] md:py-[71px] lg:py-[100px] md:bg-[#DCCFE8] xs:text-black md:text-black rounded-s-xl text-base relative sm:ml-auto sm:w-11/12">
+            <p className="bank_sections_p_font absolute xs:top-5 xs:left-2.5 sm:left-5 md:left-5 xl:left-[30px] xl:top-[35px]">06</p> */}
+          <div className="xs:pt-[50px] xs:pb-[30px] xs:px-2.5 sm:px-5 md:px-[30px] md:py-[71px] lg:py-[100px] md:bg-[#DCCFE8] xs:text-black xl:rounded-xl rounded-s-xl text-base relative sm:ml-auto sm:w-11/12">
+            <p className="bank_sections_p_font absolute xs:top-5 xs:left-2.5 md:left-5 xl:left-[30px] xl:top-[35px]">06</p>
             <h1 className="uppercase leading-[20px] mb-4">
               {langData.banks_item6_title}
             </h1>
@@ -485,7 +562,7 @@ function App() {
       {/* FOOTER SECTION */}
       <div className="footer mt-[100px] py-[78px]">
         <div className="container">
-          <div className="bg-gray_light text-black xs:py-8 xs:px-2.5 sm:p-[30px] max-w-sm mx-auto">
+          <div className="bg-gray_light rounded-xl text-black xs:py-8 xs:px-2.5 sm:p-[30px] max-w-sm mx-auto">
             <p className="uppercase font-medium">{langData.decision}</p>
             <div className="flex items-center mt-7 mb-[20px] font-medium">
               <img className="mr-4" src={message} alt="" />
