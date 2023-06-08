@@ -6,6 +6,10 @@
     background-position: top center;
 }
 
+.my_crazy_card{
+    z-index: 20!important;
+}
+
 .hero::before {
     content: '';
     width: 75%;
@@ -32,7 +36,9 @@
 }
 
 .header_girl_new_image{
-    background-position: center;
+    /* background-position: center; */
+    object-fit: cover;
+    object-position: 20% 100%;
 }
 
 .my_section_name::before {
@@ -108,7 +114,9 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: #ECF0F3;
+    /* background: #ECF0F3; */
+    background: #EDD2C8;
+    border-radius: 0 12px 12px 0;
     z-index: -1;
 }
 
@@ -136,7 +144,8 @@
     }
 
     .hero::after {
-        content: url('./assets/rassNewHero3.png');
+        /* content: url('./assets/rassNewHero4.png'); */
+        content: url('./assets/rassNewHero5.png');
     }
 
     .header_girl_new{
