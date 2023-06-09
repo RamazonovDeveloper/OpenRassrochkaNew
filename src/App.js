@@ -42,10 +42,14 @@ const TEMPLATE_ID = "template_o2hb6ck";
 const USER_ID = "WSRBV5ZOthSftBlU0";
 
 function App() {
+
   const [phoheNumber, setPhoneNumber] = useState('')
-  
+
+
   const handleOnSubmit = (e) => {
+
     e.preventDefault();
+
     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
       .then((result) => {
         console.log(result.text);
@@ -91,6 +95,22 @@ function App() {
 
   function handleClick (value) {
     setNavbarActive(value)
+  }
+
+  // onInvalid={F => {lang == 'ru' ? (F.target.setCustomValidity('Заполните это поле !!!')) : (F.target.setCustomValidity('Ushbu maydonni to`ldiring !!!'))}}
+  
+  const submitFunction = (e) => {
+    if(e.target.value == ''){
+      if (lang == 'uz') {
+        e.target.setCustomValidity('Ushbu maydonni to`ldiring !!!')
+      }else{
+        e.target.setCustomValidity('Заполните это поле !!!')
+      }
+    }else{
+      e.target.setCustomValidity('')
+    }
+
+    return true
   }
 
   // console.log(langData);
@@ -389,18 +409,21 @@ function App() {
                   {langData.partners_text}
                 </p>
               </div>
-              <div className="md:w-1/2 ">
+              <div className="md:w-1/2">
+
+                {/* onSubmit={handleOnSubmit} */}
+
                 <form onSubmit={handleOnSubmit}>
                   <input name='to_name' 
-                  required
-                  className='d-none  rounded-[3px]'
+                  className='d-none rounded-[3px]'
                   defaultValue='Open Tech' 
                   type="text" />
 
                   <input
                     name="from_name_company"
                     required
-                    // ref={companyRef}
+                    onInvalid={e => submitFunction(e)}
+                    // onInvalid={F => {lang == 'ru' ? (F.target.setCustomValidity('Заполните это поле !!!')) : (F.target.setCustomValidity('Formani to`g`ri to`ldiring !!!'))}}
                     className="w-full py-3 px-2 bg-gray_input text-base text-black my_input rounded-[3px]"
                     // className={isValidCompany ? "w-full py-3 px-2 bg-gray_input text-base text-black my_input" :"w-full py-3 px-2 bg-gray_input text-base text-black my_input_invalid"}
                     type="text"
@@ -501,7 +524,6 @@ function App() {
           <div className="w-[96%] md:w-1/2 xs:ml-auto xs:mr-0 lg:w-[40%] xs:bg-[#ECB0B7] xs:py-[74px] xs:px-2.5 md:px-[30px] md:py-[71px] lg:py-[100px] xs:text-black rounded-s-xl text-base relative sm:w-11/12 md:bg-[#00000000] md:text-black">
 ======= */}
           <div className="w-[96%] md:w-1/2 lg:w-[40%] xs:bg-[#ECB0B7] rounded-e-xl xs:py-[74px] xs:px-2.5 md:px-[30px] md:py-[71px] lg:py-[100px] xs:text-black text-base relative sm:w-11/12 md:bg-transparent md:text-black">
-{/* >>>>>>> 370306878debdb3bab0a07d5e2b052845738d063 */}
             <p className="bank_sections_p_font md:text-main_color absolute xs:top-5 xs:left-2.5 sm:left-4 md:left-5 lg:left-[30px] lg:top-[35px]">03</p>
             <h1 className="uppercase leading-[20px] mb-4">
               {langData.banks_item3_title}
@@ -511,7 +533,7 @@ function App() {
         </div>
 
         {/* BANK CARD 4 */}
-        <div className="md:flex lg:w-[60%] lg:ml-auto justify-between overflow-hidden md:overflow-scroll relative">
+        <div className="md:flex lg:w-[60%] lg:ml-auto justify-between relative">
           <div className="xs:py-[74px] md:w-1/2 xs:px-2.5 sm:px-5 md:px-[30px] md:py-[71px] lg:py-[100px] text-black text-base relative">
             <p className="bank_sections_p_font xs:text-main_color absolute xs:top-5 xs:left-2.5 md:left-5 xl:left-[30px] xl:top-[35px]">04</p>
             <h1 className="uppercase leading-[20px] mb-4">
@@ -526,7 +548,7 @@ function App() {
 ======= */}
           <div className="md:w-1/2 max-h-[300px] lg:max-h-[800px] flex justify-end items-end z-10 ">
             {/*  md:w-1/2 */}
-            <img className="lg:-z-10 lg:absolute lg:right-0 lg:bottom-0 hidden md:flex" src={bank2} alt="" />
+            <img className="lg:-z-10 lg:absolute lg:right-0 lg:bottom-0 hidden md:flex absolute z-20" src={bank2} alt="" />
             <img className="lg:-z-10 lg:absolute lg:right-0 lg:bottom-0 md:hidden" src={bank3} alt="" />
 {/* >>>>>>> 370306878debdb3bab0a07d5e2b052845738d063 */}
           </div>
