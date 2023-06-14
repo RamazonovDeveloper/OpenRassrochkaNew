@@ -264,14 +264,24 @@ function App() {
 
             {/* hero BLOCK */}
             <div className="xl:container  xxl:px-0">
-              <div className="hero__block xl:static rounded-e-xl xl:rounded-xl bg-main_color py-[30px] px-2.5 sm:px-4 md:px-5 xl:px-[70px] lg:py-[45px] lg:px-[60px] max-w-[309px] sm:max-w-[377px] smm:max-w-[400px] md:max-w-[414px] lg:max-w-[574px] xl:max-w-[650px] xl:py-[60px]">
-                <p className="hero__text text-[#E8E8E8] text-base sm:text-xl lg:text-[22px] xl:text-[25px] xs:leading-[21px]  sm:leading-[27px]  lg:leading-[30px] xl:leading-[34px]">
+
+              <div className="hero__block xl:static rounded-e-xl xl:rounded-xl bg-main_color py-[30px] px-2.5 sm:px-4 md:px-5 xl:px-[70px] lg:py-[45px] lg:px-[60px] max-w-[309px] sm:max-w-[377px] smm:max-w-[400px] md:max-w-[414px] lg:max-w-[574px] xl:max-w-[650px] xl:py-[60px] text-[#E8E8E8] text-base sm:text-[20px] sm:leading-[27px] lg:text-[23px] lg:leading-[31px] xl:text-[26px] xl:leading-[36px]">
+                {/*  text-base sm:text-xl lg:text-[22px] xl:text-[25px] xs:leading-[21px] sm:leading-[27px] lg:leading-[30px] xl:leading-[34px] */}
+                <p className="hero__text">
                   {langData?.header_text1}
                 </p>
-                <p className="hero__text text-[#E8E8E8] text-base sm:text-xl lg:text-[22px] xl:text-[25px] leading-[21px] sm:leading-[27px]  lg:leading-[30px] xl:leading-[34px]">
+                <p className="hero__text">
                   {langData?.header_text2}
                 </p>
               </div>
+              {/* <div className="hero__block xl:static rounded-e-xl xl:rounded-xl bg-main_color py-[30px] px-2.5 sm:px-4 md:px-5 xl:px-[70px] lg:py-[45px] lg:px-[60px] max-w-[309px] sm:max-w-[377px] smm:max-w-[400px] md:max-w-[414px] lg:max-w-[574px] xl:max-w-[650px] xl:py-[60px]">
+                <p className="hero__text text-[#E8E8E8] text-base sm:text-xl lg:text-[22px] xl:text-[25px] xs:leading-[21px] sm:leading-[27px] lg:leading-[30px] xl:leading-[34px]">
+                  {langData?.header_text1}
+                </p>
+                <p className="hero__text text-[#E8E8E8] text-base sm:text-xl lg:text-[22px] xl:text-[25px] leading-[21px] sm:leading-[27px] lg:leading-[30px] xl:leading-[34px]">
+                  {langData?.header_text2}
+                </p>
+              </div> */}
             </div>
 
           </div>
@@ -284,7 +294,7 @@ function App() {
         <div  id="store" className="my_section_name relative flex text-main_color font-medium xs:text-sm sm:text-base md:text-sm lg:text-base mb-10">
           <p className="uppercase">{langData.service_name}</p>
         </div>
-        <div className="text-base mt-4 font-medium">
+        <div className="text-base mt-4 md:mb-[80px] font-medium">
           {/* <p className='uppercase text-[25px] text-main_color leading-7 font-light'>Open <span className='text-black'>muddatli kartasi</span> - Bu biznesingiz o’sishi va rivojlanishi</p> */}
           {lang === "uz" ? (
             <p className="sm:w-11/12 md:w-9/12 lg:w-8/12 sm:ml-auto sm:mr-0 xs:text-[25px] sm:text-[27px] md:text-[40px] lg:text-[50px] xl:text-[60px] text-main_color xs:leading-7 sm:leading-8 md:leading-[46px] lg:leading-[58px] xl:leading-[70px] font-light">
@@ -314,7 +324,7 @@ function App() {
           <SerciseItemTemplate
             itemNum={"01"}
             itemTitle={langData.service_item1_title}
-            itemText={langData.service_item3_text}
+            itemText={langData.service_item1_text}
           />
         </div>
       </div>
@@ -605,7 +615,7 @@ function App() {
       <div className="footer mt-[100px] py-[78px]">
         <div className="container">
           <div className="bg-gray_light rounded-xl text-black xs:py-8 xs:px-2.5 sm:p-[30px] max-w-sm mx-auto">
-            <p className="uppercase font-medium">{langData.decision}</p>
+            <p className="uppercase font-medium sm:text-[18px] lg:text-[20px]">{langData.decision}</p>
             <div className="flex items-center mt-7 mb-[20px] font-medium">
               <img className="mr-4" src={message} alt="" />
               <a href="mailto:hello@opentech.uz">hello@opentech.uz</a>
