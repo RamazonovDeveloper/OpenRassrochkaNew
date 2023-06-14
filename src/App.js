@@ -78,7 +78,7 @@ function App() {
 
   const [lang, setLang] = useState(identifyLang);
 
-  // const companyRef = useRef()
+  const companyRef = useRef()
   // const [isValidCompany, setValidCompany] = useState(true)
 
   // const telRef = useRef()
@@ -108,6 +108,24 @@ function App() {
       }
     }else{
       e.target.setCustomValidity('')
+
+      // emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
+      //   .then((result) => {
+      //     console.log(result.text);
+      //     Swal.fire({
+      //       icon: 'success',
+      //       title: 'Сообщение успешно отправлено'
+      //     })
+      //   }, (error) => {
+      //     console.log(error.text);
+      //     Swal.fire({
+      //       icon: 'error',
+      //       title: 'Ooops, something went wrong',
+      //       text: error.text,
+      //     })
+      //   });
+      // e.target.reset()
+
     }
 
     return true
@@ -421,6 +439,8 @@ function App() {
 
                   <input
                     name="from_name_company"
+                    ref={companyRef}
+                    autoComplete="off"
                     required
                     onInvalid={e => submitFunction(e)}
                     // onInvalid={F => {lang == 'ru' ? (F.target.setCustomValidity('Заполните это поле !!!')) : (F.target.setCustomValidity('Formani to`g`ri to`ldiring !!!'))}}
