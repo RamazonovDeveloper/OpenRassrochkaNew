@@ -10,8 +10,8 @@ import menu from './assets/menu.png'
 import close from './assets/close.png'
 
 import headerGirlNew from './assets/rassNewHero3.png'
-import headerGirlNew2 from './assets/rassNewHero5.png' 
-import headerGirlNew3 from './assets/rassNewHero6.png' 
+import headerGirlNew2 from './assets/rassNewHero6.png' 
+// import headerGirlNew3 from './assets/rassNewHero6.png' 
 // import headerGirlNew3 from './assets/rassNewHero5 (2).png' 
 
 import logo from "./assets/open_rass_logo.png"
@@ -626,8 +626,8 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="w-[250px] md:w-[300px] lg:w-[400px] mx-auto flex items-center md:justify-end">
-            <img className="lg:ml-auto" src={itParkLogo} alt="" />
+          <div className="w-[250px]  md:w-[300px] lg:w-[400px] mx-auto flex items-center md:justify-end">
+            <img className="lg:ml-auto " src={itParkLogo} alt="" />
           </div>
         </div>
       </div>

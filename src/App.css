@@ -91,7 +91,8 @@
 .header_girl_new_image{
     /* background-position: center; */
     object-fit: cover;
-    object-position: 20% 100%;
+
+    object-position: 75% 100%;
 }
 
 .my_section_name::before {
@@ -204,7 +205,11 @@
 
     .hero::after {
         /* content: url('./assets/rassNewHero4.png'); */
-        content: url('./assets/rassNewHero5.png');
+        /* content: url('./assets/rassNewHero5.png'); */
+        content: url('./assets/rassNewHero7.png');
+        /* width: 912px;
+        height: 638px;
+        object-fit: contain; */
     }
 
     .header_girl_new{
@@ -215,7 +220,7 @@
 
 @media screen and (min-width:600px) {
     .hero::after {
-        left: 10%;
+        /* left: 10%; */
     }
 
     .hero__block{
@@ -231,6 +236,7 @@
     .hero__block{
         padding-left: 57px;
     }
+
 }
 
 
@@ -238,11 +244,21 @@
     .hero__block{
         padding-left: 72px;
     }
+    
+    .hero::after {
+        /* right: 0; */
+        left: -20%;
+    }
 }
 
 @media screen and (min-width:690px) {
     .hero__block{
         padding-left: 87px;
+    }
+
+    .hero::after {
+        /* right: 0; */
+        left: -10%;
     }
 }
 
@@ -293,7 +309,7 @@
     }
 
     .hero::after {
-        left: 17%;
+        left: 0%;
     }
 
     .hero__block{
@@ -331,6 +347,10 @@
     .hero__block{
         padding-left: 127px;
     }
+
+    .hero::after{
+        left: 10%;
+    }
 }
 
 @media screen and (min-width:980px) {
@@ -351,7 +371,7 @@
     }
     
     .hero::after {
-        left: 30%;
+        left: 18%;
     }
 
     .form_section{
@@ -383,6 +403,10 @@
 @media screen and (min-width:1160px) {
     .hero__block{
         padding-left: 112px;
+    }
+
+    .hero::after{
+        left: 23%;
     }
 }
 
@@ -460,7 +484,7 @@
 
 @media screen and (min-width:1440px) {
     .hero::after {
-        left: 45%;
+        left: 35%;
     }
 
     .my_section_name::before {
@@ -490,8 +514,7 @@
 
 @media screen and (min-width:2000px) {
     .hero::after {
-        left: 45%;
-        /* right: 50%; */
+        left: 40%;
     }
 
     .my_section_name::before {
@@ -521,8 +544,7 @@
 @media screen and (min-width:2700px) {
 
     .hero::after {
-        left: 50%;
-        /* right: 50%; */
+        left: 43%;
     }
     
     .info::after {
@@ -536,6 +558,11 @@
     .info::after {
         left: unset;
         right: 30%;
+    }
+
+    .hero::after {
+        left: unset;
+        right: 35%;
     }
 }
 
