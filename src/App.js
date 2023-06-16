@@ -622,7 +622,7 @@ function App() {
             </div>
             <div className="flex items-center font-medium">
               <img className="mr-4" src={phone} alt="" />
-              <a href="tel:998909687881"> +998 (90) 968-7881</a>
+              <a href="tel:998940073609"> (+998) 94-007-3609</a>
             </div>
           </div>
         </div>

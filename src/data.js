@@ -1,6 +1,6 @@
 export const data = {
     uz:{
-        nav_link_1:"korxonalari uchun",
+        nav_link_1:"korxonalar uchun",
         nav_link_2:"Banklarga",
         nav_link_3:"Savdo va xizmat ko'rsatish korxonalari uchun",
 
