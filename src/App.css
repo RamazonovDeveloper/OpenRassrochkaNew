@@ -133,6 +133,8 @@
     background: url('./assets/formNewBackground.png');
     background-color: #4E0F8A;
     background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
     /* background-size: cover;
     background-repeat: no-repeat;
     background-position: center; */

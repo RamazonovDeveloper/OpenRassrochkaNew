@@ -26,10 +26,9 @@ import bank3 from './assets/bankImgNew3.png'
 
 import girlOpen from "./assets/girl-open.png";
 import mobiles from "./assets/telNew.png";
-import mobile2 from "./assets/telefonNewImg.png"
 
-import singleTel1 from "./assets/singleTel1.png"
-import singleTel2 from "./assets/singleTel2.png"
+
+import itParkLogo from "./assets/itParkLogoWhite.png"
 
 import { data } from "./data";
 
@@ -613,17 +612,22 @@ function App() {
 
       {/* FOOTER SECTION */}
       <div className="footer mt-[100px] py-[78px]">
-        <div className="container">
-          <div className="bg-gray_light rounded-xl text-black xs:py-8 xs:px-2.5 sm:p-[30px] max-w-sm mx-auto">
-            <p className="uppercase font-medium sm:text-[18px] lg:text-[20px]">{langData.decision}</p>
-            <div className="flex items-center mt-7 mb-[20px] font-medium">
-              <img className="mr-4" src={message} alt="" />
-              <a href="mailto:hello@opentech.uz">hello@opentech.uz</a>
+        <div className="container grid md:grid-cols-2 grid-cols-1 gap-4">
+          <div className="flex justify-center md:justify-start">
+            <div className="bg-gray_light rounded-xl text-black xs:py-8 xs:px-2.5 sm:p-[30px] max-w-sm ">
+              <p className="uppercase font-medium sm:text-[18px] lg:text-[20px]">{langData.decision}</p>
+              <div className="flex items-center mt-7 mb-[20px] font-medium">
+                <img className="mr-4" src={message} alt="" />
+                <a href="mailto:hello@opentech.uz">hello@opentech.uz</a>
+              </div>
+              <div className="flex items-center font-medium">
+                <img className="mr-4" src={phone} alt="" />
+                <a href="tel:998940073609"> (+998) 94-007-3609</a>
+              </div>
             </div>
-            <div className="flex items-center font-medium">
-              <img className="mr-4" src={phone} alt="" />
-              <a href="tel:998940073609"> (+998) 94-007-3609</a>
-            </div>
+          </div>
+          <div className="w-[250px] md:w-[300px] lg:w-[400px] mx-auto flex items-center md:justify-end">
+            <img className="lg:ml-auto" src={itParkLogo} alt="" />
           </div>
         </div>
       </div>
