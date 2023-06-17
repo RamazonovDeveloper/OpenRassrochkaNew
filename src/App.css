@@ -206,10 +206,13 @@
     .hero::after {
         /* content: url('./assets/rassNewHero4.png'); */
         /* content: url('./assets/rassNewHero5.png'); */
-        content: url('./assets/rassNewHero7.png');
-        /* width: 912px;
+        
+        /* content: url('./assets/rassNewHero7.png'); */
+        background-image: url('./assets/rassNewHero7x2.png');
+        background-size: cover;
+        width: 912px;
         height: 638px;
-        object-fit: contain; */
+        /* object-fit: contain; */
     }
 
     .header_girl_new{

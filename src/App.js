@@ -614,7 +614,7 @@ function App() {
       <div className="footer mt-[100px] py-[78px]">
         <div className="container grid md:grid-cols-2 grid-cols-1 gap-4">
           <div className="flex justify-center md:justify-start">
-            <div className="bg-gray_light rounded-xl text-black xs:py-8 xs:px-2.5 sm:p-[30px] max-w-sm ">
+            <div className="bg-gray_light rounded-xl text-black py-8 px-2.5 sm:p-[30px] max-w-sm ">
               <p className="uppercase font-medium sm:text-[18px] lg:text-[20px]">{langData.decision}</p>
               <div className="flex items-center mt-7 mb-[20px] font-medium">
                 <img className="mr-4" src={message} alt="" />
